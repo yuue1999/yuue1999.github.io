@@ -8,15 +8,15 @@
   <link rel="dns-prefetch" href="http://yoursite.com">
   <title>first page | Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="我的一级标题">
+  <meta name="description" content="数据结构 5&#x2F;18">
 <meta property="og:type" content="article">
 <meta property="og:title" content="first page">
 <meta property="og:url" content="http://yoursite.com/2020/05/08/first-page/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="我的一级标题">
+<meta property="og:description" content="数据结构 5&#x2F;18">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2020-05-08T11:17:13.000Z">
-<meta property="article:modified_time" content="2020-05-08T13:43:27.696Z">
+<meta property="article:modified_time" content="2020-05-18T10:09:28.051Z">
 <meta property="article:author" content="悦崽">
 <meta name="twitter:card" content="summary">
   
@@ -194,12 +194,18 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h1 id="我的一级标题"><a href="#我的一级标题" class="headerlink" title="我的一级标题"></a>我的一级标题</h1><a id="more"></a>
-<h2 id="我的二级标题"><a href="#我的二级标题" class="headerlink" title="我的二级标题"></a>我的二级标题</h2><h3 id="我的三级标题"><a href="#我的三级标题" class="headerlink" title="我的三级标题"></a>我的三级标题</h3><h4 id="我的四级标题"><a href="#我的四级标题" class="headerlink" title="我的四级标题"></a>我的四级标题</h4><p>我的内容</p>
-<blockquote>
-<p>区块引用</p>
-</blockquote>
-<p>[百度]&lt;<a href="http://www.baidu.com&gt;" target="_blank" rel="noopener">www.baidu.com&gt;</a></p>
+        <h1 id="数据结构-5-18"><a href="#数据结构-5-18" class="headerlink" title="数据结构 5/18"></a>数据结构 5/18</h1><a id="more"></a>
+<p>JavaScript 中的变量作用域被定义为函数作用域。这是指变量的值在定义该变量的函数内是可见的，并且定义在该函数内的嵌套函数中也可访问该变量。</p>
+<p>在主程序中，如果在函数外定义一个变量，那么该变量拥有全局作用域，这是指可以在包<br>括函数体内的程序的任何部分访问该变量。下面用一段简短的程序展示全局作用域的工作<br>原理：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">function showScope() &#123;</span><br><span class="line">return scope;</span><br><span class="line">&#125;</span><br><span class="line">var scope &#x3D; &quot;global&quot;;</span><br><span class="line">print(scope); &#x2F;&#x2F; 显示 &quot;global&quot;</span><br><span class="line">print(showScope()); &#x2F;&#x2F; 显示 &quot;global&quot;</span><br></pre></td></tr></table></figure>
+<p>函数 showScope() 可以访问变量 scope ，因为 scope 是一个全局变量。可以在程序的任意位<br>置定义全局变量，比如在函数定义前或者函数定义后。<br>在 showScope() 函数内再定义一个 scope 变量，看看这时发生了什么：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">function showScope() &#123;</span><br><span class="line">var scope &#x3D; &quot;local&quot;;</span><br><span class="line">return scope;</span><br><span class="line">&#125;</span><br><span class="line">var scope &#x3D; &quot;global&quot;;</span><br><span class="line">print(scope); &#x2F;&#x2F; 显示 &quot;global&quot;</span><br><span class="line">print(showScope()); &#x2F;&#x2F; 显示 &quot;local&quot;</span><br></pre></td></tr></table></figure>
+<p>showScope() 函数内定义的变量 scope 拥有局部作用域，而在主程序中定义的变量 scope 是<br>一个全局变量。尽管两个变量名字相同，但它们的作用域不同，在定义它们的地方访问时<br>得到的值也不一样。<br>这些行为都是正常且符合预期的。但是，如果在定义变量时省略了关键字 var ，那么一切<br>都变了。JavaScript 允许在定义变量时不使用关键字 var ，但这样做的后果是定义的变量自<br>动拥有了全局作用域，即使你是在一个函数内定义该变量，它也是全局变量。</p>
+<p>例 1-11 展示了定义变量时省略了关键字 var 的后果。<br>例 1-11　滥用全局变量的恶果</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">function showScope() &#123;</span><br><span class="line">scope &#x3D; &quot;local&quot;;</span><br><span class="line">return scope;</span><br><span class="line">&#125;</span><br><span class="line">scope &#x3D; &quot;global&quot;;</span><br><span class="line">print(scope); &#x2F;&#x2F; 显示 &quot;global&quot;</span><br><span class="line">print(showScope()); &#x2F;&#x2F; 显示 &quot;local&quot;</span><br><span class="line">print(scope); &#x2F;&#x2F; 显示 &quot;local&quot;</span><br></pre></td></tr></table></figure>
+<p>由于在 showScope() 函数内定义变量 scope 时省略了关键字 var ，所以在将字符串 “local” 赋给该变量时，实际上是改变了主程序中 scope 变量的值。因此，在定义变量时，应该总是以关键字 var 开始，以避免发生类似的错误。</p>
+<p>前面我们提到，JavaScript 拥有的是函数作用域，其含义是 JavaScript 中没有块级作用域，<br>这一点有别于其他很多现代编程语言。使用块级作用域，可以在一段代码块中定义变量，该变量只在块内可见，离开这段代码块就不可见了</p>
+<h2 id="递归"><a href="#递归" class="headerlink" title="递归"></a>递归</h2><p>自己调用自己，当递归深度太深时，可能需要用到迭代，<strong>任何可以被递归定义的函数，都可以被改写为迭代式的程序，要将这点牢记于心。</strong></p>
 
       
 
@@ -296,6 +302,20 @@
 </article>
 
   
+<nav id="article-nav">
+  
+    <a href="/2020/05/18/%E6%9E%84%E9%80%A0%E5%87%BD%E6%95%B0/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          构造函数
+        
+      </div>
+    </a>
+  
+  
+</nav>
+
 
 <aside class="wrap-side-operation">
     <div class="mod-side-operation">
@@ -317,7 +337,7 @@
                 </span>
                 <span class="tooltip-content">
                     <div class="toc-article">
-                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#我的一级标题"><span class="toc-number">1.</span> <span class="toc-text">我的一级标题</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#我的二级标题"><span class="toc-number">1.1.</span> <span class="toc-text">我的二级标题</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#我的三级标题"><span class="toc-number">1.1.1.</span> <span class="toc-text">我的三级标题</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#我的四级标题"><span class="toc-number">1.1.1.1.</span> <span class="toc-text">我的四级标题</span></a></li></ol></li></ol></li></ol></li></ol>
+                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#数据结构-5-18"><span class="toc-number">1.</span> <span class="toc-text">数据结构 5&#x2F;18</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#递归"><span class="toc-number">1.1.</span> <span class="toc-text">递归</span></a></li></ol></li></ol>
                     </div>
                 </span>
             </div>
