@@ -6,17 +6,17 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>列表 | Hexo</title>
+  <title>数据结构 | Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="列表的抽象数据类型定义列表是一组有序的数据。每个列表中的数据项称为元素。在 JavaScript 中，列表中的元素可以是任意数据类型。列表中可以保存多少元素并没有事先限定，实际使用时元素的数量受到程序内存的限制。 在内部实现上，用一个变量 listSize 保存列表中元素的个数。可以在列表末尾 append 一个元素，也可以在一个给定元素后或列表的起始位置 insert 一个元素。使用 remo">
+  <meta name="description" content="列表">
 <meta property="og:type" content="article">
-<meta property="og:title" content="列表">
+<meta property="og:title" content="数据结构">
 <meta property="og:url" content="http://yoursite.com/2020/05/19/%E5%88%97%E8%A1%A8/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="列表的抽象数据类型定义列表是一组有序的数据。每个列表中的数据项称为元素。在 JavaScript 中，列表中的元素可以是任意数据类型。列表中可以保存多少元素并没有事先限定，实际使用时元素的数量受到程序内存的限制。 在内部实现上，用一个变量 listSize 保存列表中元素的个数。可以在列表末尾 append 一个元素，也可以在一个给定元素后或列表的起始位置 insert 一个元素。使用 remo">
+<meta property="og:description" content="列表">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2020-05-19T11:39:56.000Z">
-<meta property="article:modified_time" content="2020-05-20T01:51:18.020Z">
+<meta property="article:modified_time" content="2020-05-21T07:41:55.973Z">
 <meta property="article:author" content="悦崽">
 <meta name="twitter:card" content="summary">
   
@@ -181,7 +181,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      列表
+      数据结构
     </h1>
   
 
@@ -194,7 +194,7 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <a id="more"></a>
+        <h1 id="列表"><a href="#列表" class="headerlink" title="列表"></a>列表</h1><a id="more"></a>
 <h1 id="列表的抽象数据类型定义"><a href="#列表的抽象数据类型定义" class="headerlink" title="列表的抽象数据类型定义"></a>列表的抽象数据类型定义</h1><p>列表是一组有序的数据。每个列表中的数据项称为元素。在 JavaScript 中，列表中的元素<br>可以是任意数据类型。列表中可以保存多少元素并没有事先限定，实际使用时元素的数量<br>受到程序内存的限制。</p>
 <p>在内部实现上，用一个变量 listSize 保存列表中元素的个数。可以在列表末尾 append 一个元素，<br>也可以在一个给定元素后或列表的起始位置 insert 一个元素。使用 remove 方法从列表中删除元素，使用 clear 方法清空列表中所有的元素。<br>还可以使用 toString() 方法显示列表中所有的元素，使用 getElement() 方法显示当前元素。</p>
 <p>列表拥有描述元素位置的属性。</p>
@@ -356,14 +356,14 @@
       <i class="icon-circle-left"></i>
       <div class="article-nav-title">
         
-          栈
+          数据结构
         
       </div>
     </a>
   
   
-    <a href="/2020/05/18/%E6%95%B0%E7%BB%84/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">数组</div>
+    <a href="/2020/05/18/%E6%9E%84%E9%80%A0%E5%87%BD%E6%95%B0/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">构造函数</div>
       <i class="icon-circle-right"></i>
     </a>
   
@@ -390,7 +390,7 @@
                 </span>
                 <span class="tooltip-content">
                     <div class="toc-article">
-                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#列表的抽象数据类型定义"><span class="toc-number">1.</span> <span class="toc-text">列表的抽象数据类型定义</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#实现列表类"><span class="toc-number">2.</span> <span class="toc-text">实现列表类</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#append-为列表添加元素"><span class="toc-number">2.1.</span> <span class="toc-text">append()为列表添加元素</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#remove-删除元素"><span class="toc-number">2.2.</span> <span class="toc-text">remove()删除元素</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#ES6中有内置的find-方法，不要和这里搞混"><span class="toc-number">2.2.1.</span> <span class="toc-text">ES6中有内置的find()方法，不要和这里搞混</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#length-返回元素个数"><span class="toc-number">2.3.</span> <span class="toc-text">length 返回元素个数</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#toString-显示列表中的元素"><span class="toc-number">2.4.</span> <span class="toc-text">toString 显示列表中的元素</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#insert-：向列表中插入一个元素"><span class="toc-number">2.5.</span> <span class="toc-text">insert ：向列表中插入一个元素</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#clear-：清空列表中所有的元素"><span class="toc-number">2.6.</span> <span class="toc-text">clear ：清空列表中所有的元素</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#contains-：判断给定值是否在列表中"><span class="toc-number">2.7.</span> <span class="toc-text">contains ：判断给定值是否在列表中</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#遍历列表"><span class="toc-number">2.8.</span> <span class="toc-text">遍历列表</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#使用迭代器访问列表"><span class="toc-number">2.9.</span> <span class="toc-text">使用迭代器访问列表</span></a></li></ol></li></ol>
+                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#列表"><span class="toc-number">1.</span> <span class="toc-text">列表</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#列表的抽象数据类型定义"><span class="toc-number">2.</span> <span class="toc-text">列表的抽象数据类型定义</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#实现列表类"><span class="toc-number">3.</span> <span class="toc-text">实现列表类</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#append-为列表添加元素"><span class="toc-number">3.1.</span> <span class="toc-text">append()为列表添加元素</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#remove-删除元素"><span class="toc-number">3.2.</span> <span class="toc-text">remove()删除元素</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#ES6中有内置的find-方法，不要和这里搞混"><span class="toc-number">3.2.1.</span> <span class="toc-text">ES6中有内置的find()方法，不要和这里搞混</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#length-返回元素个数"><span class="toc-number">3.3.</span> <span class="toc-text">length 返回元素个数</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#toString-显示列表中的元素"><span class="toc-number">3.4.</span> <span class="toc-text">toString 显示列表中的元素</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#insert-：向列表中插入一个元素"><span class="toc-number">3.5.</span> <span class="toc-text">insert ：向列表中插入一个元素</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#clear-：清空列表中所有的元素"><span class="toc-number">3.6.</span> <span class="toc-text">clear ：清空列表中所有的元素</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#contains-：判断给定值是否在列表中"><span class="toc-number">3.7.</span> <span class="toc-text">contains ：判断给定值是否在列表中</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#遍历列表"><span class="toc-number">3.8.</span> <span class="toc-text">遍历列表</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#使用迭代器访问列表"><span class="toc-number">3.9.</span> <span class="toc-text">使用迭代器访问列表</span></a></li></ol></li></ol>
                     </div>
                 </span>
             </div>

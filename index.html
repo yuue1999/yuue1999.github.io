@@ -179,7 +179,7 @@
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2020/05/20/%E4%BA%8C%E5%8F%89%E6%A0%91/">二叉树</a>
+      <a class="article-title" href="/2020/05/20/%E4%BA%8C%E5%8F%89%E6%A0%91/">数据结构</a>
     </h1>
   
 
@@ -244,7 +244,7 @@
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2020/05/20/%E9%93%BE%E8%A1%A8/">链表</a>
+      <a class="article-title" href="/2020/05/20/%E9%93%BE%E8%A1%A8/">数据结构</a>
     </h1>
   
 
@@ -257,40 +257,10 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <a id="more"></a>
-<h1 id="数组的缺点"><a href="#数组的缺点" class="headerlink" title="数组的缺点"></a>数组的缺点</h1><p>在很多编程语言中，数组的长度是固定的，所以当数组已被数据填满时，再要加入新的元素就会非常困难。在数组中，添加和删除元素也很麻烦，因为需要将数组中的其他元素向前或向后平移，以反映数组刚刚进行了添加或删除操作。</p>
-<p>然而，JavaScript 的数组并不存在上述问题，因为使用 split() 方法不需要再访问数组中的其他元素了。</p>
-<p><code>JavaScript 中数组的主要问题是，它们被实现成了对象，与其他语言（比如 C++ 和 Java）
-的数组相比，效率很低</code><br>如果你发现数组在实际使用时很慢，就可以考虑使用链表来替代它。除了对数据的随机访<br>问，链表几乎可以用在任何可以使用一维数组的情况中。如果需要随机访问，数组仍然是<br>更好的选择。</p>
-<h1 id="定义链表"><a href="#定义链表" class="headerlink" title="定义链表"></a>定义链表</h1><p>  链表是由一组节点组成的集合。每个节点都使用一个对象的引用指向它的后继。指向另一<br>个节点的引用叫做链。</p>
-<p>数组元素靠它们的<code>位置</code>进行引用，链表元素则是靠<code>相互之间的关系</code>进行引用。</p>
-<p>在图中，我们说 bread 跟在 milk 后面，而不说 bread 是链表中的第二个元素。</p>
-<p>遍历链表，就是跟着链接，从链表的首元素一直走到尾元素（但这不包含链表的头节点，头节点常常用来作为链表的接入点）。图中另外一个值得注意的地方是，链表的尾元素指向一个 null 节点。然而要标识出链表的起始节点却有点麻烦，许多链表的实现都在链表最前面有一个特殊节点，叫做头节点。经过改造之后，链表成了下面的样子。<br><img src="img/1.png" alt="avatar"></p>
-<h2 id="有头结点的链表："><a href="#有头结点的链表：" class="headerlink" title="有头结点的链表："></a>有头结点的链表：</h2><h3 id="链表中插入一个节点的效率很高。"><a href="#链表中插入一个节点的效率很高。" class="headerlink" title="链表中插入一个节点的效率很高。"></a>链表中插入一个节点的效率很高。</h3><p>向链表中插入一个节点，需要修改它前面的节点（前驱），使其指向新加入的节点，而新加入的节点则指向原来前驱指向的节点。演示了如何在 eggs 后加入 cookies。<br><img src="img/2.png" alt="avatar">     </p>
-<h3 id="从链表中删除一个元素也很简单"><a href="#从链表中删除一个元素也很简单" class="headerlink" title="从链表中删除一个元素也很简单"></a>从链表中删除一个元素也很简单</h3><p>将待删除元素的前驱节点指向待删除元素的后继节点，同时<br>将待删除元素指向 null ，元素就删除成功了。图 6-4 演示了从链表中删除“bacon”的过程。<br><img src="img/3.png" alt="avatar">    </p>
-<h1 id="基于对象的链表"><a href="#基于对象的链表" class="headerlink" title="基于对象的链表"></a>基于对象的链表</h1><p>我们设计的链表包含两个类。 Node 类用来表示节点， LinkedList 类提供了插入节点、删除<br>节点、显示列表元素的方法，以及其他一些辅助方法。</p>
-<h2 id="Node类"><a href="#Node类" class="headerlink" title="Node类"></a>Node类</h2><p>Node 类包含两个属性： element 用来保存节点上的数据， next 用来保存指向下一个节点的<br>链接。我们使用一个构造函数来创建节点，该构造函数设置了这两个属性的值：</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">Node</span>(<span class="params">element</span>) </span>&#123;</span><br><span class="line"><span class="keyword">this</span>.element = element;</span><br><span class="line"><span class="keyword">this</span>.next = <span class="literal">null</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h2 id="LinkedList类"><a href="#LinkedList类" class="headerlink" title="LinkedList类"></a>LinkedList类</h2><p>LList 类提供了对链表进行操作的<strong>方法</strong>。该类的功能包括插入删除节点、在列表中查找给定的值。该类也有一个构造函数，链表只有一个属性，那就是使用一个 Node 对象来保存该链表的头节点。<br>该类的构造函数如下所示：</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">LList</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line"><span class="keyword">this</span>.head = <span class="keyword">new</span> Node(<span class="string">"head"</span>);</span><br><span class="line"><span class="keyword">this</span>.find = find;</span><br><span class="line"><span class="keyword">this</span>.insert = insert;</span><br><span class="line"><span class="keyword">this</span>.remove = remove;</span><br><span class="line"><span class="keyword">this</span>.display = display;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>head 节点的 next 属性被初始化为 null ，当有新元素插入时， next 会指向新的元素，所以在这里我们没有修改 next 的值。</p>
-<h2 id="插入新节点"><a href="#插入新节点" class="headerlink" title="插入新节点"></a>插入新节点</h2><p>需要明确指出要在哪个节点前面或后面插入<br>在一个已知节点后面插入元素时，先要找到“后面”的节点。为此，创建一个辅助方法<br>find() ，该方法遍历链表，查找给定数据。如果找到数据，该方法就返回保存该数据的节<br>点。</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">find</span>(<span class="params">item</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">var</span> currNode = <span class="keyword">this</span>.head;</span><br><span class="line">    <span class="keyword">while</span> (currNode.element != item) &#123;</span><br><span class="line">        currNode = currNode.next;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> currNode;</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
-<p>find() 方法演示了如何在链表上进行移动。首先，创建一个新节点，并将链表的头节点赋<br>给这个新创建的节点。然后在链表上进行循环，如果当前节点的 element 属性和我们要找<br>的信息不符，就从当前节点移动到下一个节点。如果查找成功，该方法返回包含该数据的<br>节点；否则，返回 null 。一旦找到“后面”的节点，就可以将新节点插入链表了。首先，将新节点的 next 属性设置为“后面”节点的 next 属性对应的值。然后设置“后面”节点的 next 属性指向新节点。</p>
-<h2 id="insert"><a href="#insert" class="headerlink" title="insert( )"></a>insert( )</h2><p>insert() 方法的定义如下：</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">insert</span>(<span class="params">newElement, item</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">var</span> newNode = <span class="keyword">new</span> Node(newElement);</span><br><span class="line">    <span class="keyword">var</span> current = <span class="keyword">this</span>.find(item);</span><br><span class="line">    newNode.next = current.next;</span><br><span class="line">    current.next = newNode;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h2 id="display"><a href="#display" class="headerlink" title="display( )"></a>display( )</h2><p>现在已经可以开始测试我们的链表实现了。然而在测试之前，先来定义一个 display() 方<br>法，该方法用来显示链表中的元素：</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">display</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="keyword">var</span> currNode = <span class="keyword">this</span>.head;</span><br><span class="line">    <span class="keyword">while</span> (!(currNode.next == <span class="literal">null</span>)) &#123;</span><br><span class="line">        <span class="built_in">console</span>.log(currNode.next.element);</span><br><span class="line">        currNode = currNode.next;</span><br><span class="line">&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>该方法先将列表的头节点赋给一个变量，然后循环遍历链表，当前节点的 next 属性为<br>null 时循环结束。为了只显示包含数据的节点（换句话说，不显示头节点），程序只访问<br>当前节点的下一个节点中保存的数据：currNode.next.element最后，再加一点代码，来试试新定义的链表。</p>
-<h2 id="删除节点"><a href="#删除节点" class="headerlink" title="删除节点"></a>删除节点</h2><p>需要先找到待删除节点前面的节点。找到这个节点后，修改它的next 属性，使其不再指向待删除节点，而是指向待删除节点的下一个节点。</p>
-<p>我们可以定义一个方法 findPrevious() ，来做这件事。该方法遍历链表中的元素，检查每一个节点的下<br>一个节点中是否存储着待删除数据。如果找到，返回该节点（即“前一个”节点），这样就可以修改它next 属性了。 findPrevious() 方法的定义如下：</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">findPrevious</span>(<span class="params">item</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">var</span> currNode = <span class="keyword">this</span>.head;</span><br><span class="line">    <span class="keyword">while</span> (!(currNode.next == <span class="literal">null</span>) &amp;&amp;(currNode.next.element != item)) &#123;</span><br><span class="line">        currNode = currNode.next;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> currNode;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p>现在就可以开始写 remove() 方法了：</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">remove</span>(<span class="params">item</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">var</span> prevNode = <span class="keyword">this</span>.findPrevious(item);</span><br><span class="line">    <span class="keyword">if</span> (!(prevNode.next == <span class="literal">null</span>)) &#123;</span><br><span class="line">        prevNode.next = prevNode.next.next;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>该方法中最重要的一行代码如下，看起来有点奇怪，但是完全说得通：<br><code>prevNode.next = prevNode.next.next;</code><br>这里跳过了待删除节点，让“前一个”节点指向了待删除节点的后一个节点。</p>
-<h2 id="双向链表"><a href="#双向链表" class="headerlink" title="双向链表"></a>双向链表</h2><h2 id="循环链表"><a href="#循环链表" class="headerlink" title="循环链表"></a>循环链表</h2>
+        <h1 id="链表"><a href="#链表" class="headerlink" title="链表"></a>链表</h1>
+        
+          <a class="article-more-a" href="/2020/05/20/%E9%93%BE%E8%A1%A8/#more">more >></a>
+        
       
 
       
@@ -339,7 +309,7 @@
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2020/05/20/%E9%98%9F%E5%88%97/">队列</a>
+      <a class="article-title" href="/2020/05/20/%E9%98%9F%E5%88%97/">数据结构</a>
     </h1>
   
 
@@ -352,34 +322,10 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <a id="more"></a>
-<h1 id="队列的操作"><a href="#队列的操作" class="headerlink" title="队列的操作"></a>队列的操作</h1><p>队列的两种主要操作是：向队列中插入新元素和删除队列中的元素。</p>
-<p>插入操作也叫做入队，删除操作也叫做出队。入队操作在队尾插入新元素，出队操作删除队头的元素</p>
-<p>队列的另外一项重要操作是读取队头的元素。这个操作叫做 peek() 。该操作返回队头元素，但不把它从队列中删除。除了读取队头元素，我们还想知道队列中存储了多少元素，可以使用 length 属性满足该需求；要想清空队列中的所有元素，可以使用 clear() 方法来<br>实现。</p>
-<h1 id="队列的实现"><a href="#队列的实现" class="headerlink" title="队列的实现"></a>队列的实现</h1><p>数组的 push() 方法可以在数组末尾加入元素， shift() 方法则可删除数组的第一个元素。</p>
-<p>push() 方法将它的参数插入数组中第一个开放的位置，该位置总在数组的末尾，即使是个空数组也是如此。<br>准备开始实现 Queue 类，先从构造函数开始：</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">Queue</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="keyword">this</span>.dataStore = [];</span><br><span class="line">    <span class="keyword">this</span>.enqueue = enqueue;</span><br><span class="line">    <span class="keyword">this</span>.dequeue = dequeue;</span><br><span class="line">    <span class="keyword">this</span>.front = front;</span><br><span class="line">    <span class="keyword">this</span>.back = back;</span><br><span class="line">    <span class="keyword">this</span>.toString = toString;</span><br><span class="line">    <span class="keyword">this</span>.empty = empty;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>enqueue() 方法向队尾添加一个元素：</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">enqueue</span>(<span class="params">element</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">this</span>.dataStore.push(element);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>dequeue() 方法删除队首的元素：</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">dequeue</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="keyword">this</span>.dataStore.shift();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>可以使用如下方法读取队首和队尾的元素：</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">front</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="keyword">this</span>.dataStore[<span class="number">0</span>];</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">back</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="keyword">this</span>.dataStore[<span class="keyword">this</span>.dataStore.length<span class="number">-1</span>];</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>还需要 toString() 方法显示队列内的所有元素：</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">toString</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="keyword">var</span> retStr = <span class="string">""</span>;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">var</span> i = <span class="number">0</span>; i &lt; <span class="keyword">this</span>.dataStore.length; ++i) &#123;</span><br><span class="line">        retStr += <span class="keyword">this</span>.dataStore[i] + <span class="string">"\n"</span>;</span><br><span class="line">    &#125;</span><br><span class="line">        <span class="keyword">return</span> retStr;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>最后，需要一个方法判断队列是否为空：</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">empty</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="keyword">if</span> (<span class="keyword">this</span>.dataStore.length == <span class="number">0</span>) &#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">else</span> &#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h1 id="优先队列"><a href="#优先队列" class="headerlink" title="优先队列"></a>优先队列</h1><p>有一些使用队列的应用，在删除元素时不必遵守先进先出的约定。这种应用，需要使用一个叫做优先队列的数据结构来进行模拟。</p>
-<p>从优先队列中删除元素时，需要考虑优先权的限制。比如医院急诊科=（Emergency Department）的候诊室，就是一个采取优先队列的例子。当病人进入候诊室时，分诊护士会评估患者病情的严重程度，然后给一个优先级代码。高优先级的患者先于低优先级的患者就医，同样优先级的患者按照先来先服务的顺序就医。</p>
-<p>先来定义存储队列元素的对象，然后再构建我们的优先队列系统：</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">Patient</span>(<span class="params">name, code</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">this</span>.name = name;</span><br><span class="line">    <span class="keyword">this</span>.code = code;<span class="comment">//整数，表示患者的优先级或病情的严重程度</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>现在需要重新定义 dequeue() 方法，使其删除队列中拥有最高优先级的元素。我们规定：优先码的值最小的元素优先级最高。新的 dequeue() 方法遍历队列的底层存储数组，从中找出优先码最低的元素，然后使用数组的 splice() 方法删除优先级最高的元素。新的dequeue() 方法定义如下所示：</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">dequeue</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="keyword">var</span> priority = <span class="keyword">this</span>.dataStore[<span class="number">0</span>].code;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">var</span> i = <span class="number">1</span>; i &lt; <span class="keyword">this</span>.dataStore.length; ++i) &#123;</span><br><span class="line">        <span class="keyword">if</span> (<span class="keyword">this</span>.dataStore[i].code &lt; priority) &#123;</span><br><span class="line">             priority = i;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">this</span>.dataStore.splice(priority,<span class="number">1</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>dequeue() 方法使用简单的顺序查找方法寻找优先级最高的元素（优先码越小优先级越高，比如，1 比 5 的优先级高）。该方法返回包含一个元素的数组——从队列中删除的元素。<br>最后，需要定义 toString() 方法来显示 Patient 对象。</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">toString</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="keyword">var</span> retStr = <span class="string">""</span>;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">var</span> i = <span class="number">0</span>; i &lt; <span class="keyword">this</span>.dataStore.length; ++i) &#123;</span><br><span class="line">        retStr += <span class="keyword">this</span>.dataStore[i].name + <span class="string">" code: "</span></span><br><span class="line">+ <span class="keyword">this</span>.dataStore[i].code + <span class="string">"\n"</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> retStr;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h2 id="优先队列的实现"><a href="#优先队列的实现" class="headerlink" title="优先队列的实现"></a>优先队列的实现</h2><p>感觉有点问题</p>
-
+        <h1 id="队列"><a href="#队列" class="headerlink" title="队列"></a>队列</h1>
+        
+          <a class="article-more-a" href="/2020/05/20/%E9%98%9F%E5%88%97/#more">more >></a>
+        
       
 
       
@@ -428,7 +374,7 @@
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2020/05/20/%E6%A0%88/">栈</a>
+      <a class="article-title" href="/2020/05/20/%E6%A0%88/">数据结构</a>
     </h1>
   
 
@@ -493,7 +439,7 @@
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2020/05/19/%E5%88%97%E8%A1%A8/">列表</a>
+      <a class="article-title" href="/2020/05/19/%E5%88%97%E8%A1%A8/">数据结构</a>
     </h1>
   
 
@@ -506,67 +452,10 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <a id="more"></a>
-<h1 id="列表的抽象数据类型定义"><a href="#列表的抽象数据类型定义" class="headerlink" title="列表的抽象数据类型定义"></a>列表的抽象数据类型定义</h1><p>列表是一组有序的数据。每个列表中的数据项称为元素。在 JavaScript 中，列表中的元素<br>可以是任意数据类型。列表中可以保存多少元素并没有事先限定，实际使用时元素的数量<br>受到程序内存的限制。</p>
-<p>在内部实现上，用一个变量 listSize 保存列表中元素的个数。可以在列表末尾 append 一个元素，<br>也可以在一个给定元素后或列表的起始位置 insert 一个元素。使用 remove 方法从列表中删除元素，使用 clear 方法清空列表中所有的元素。<br>还可以使用 toString() 方法显示列表中所有的元素，使用 getElement() 方法显示当前元素。</p>
-<p>列表拥有描述元素位置的属性。</p>
-<p>列表有前有后（分别对应 front 和 end）。</p>
-<p>使用 next() 方法可以从当前元素移动到下一个元素，</p>
-<p>使用 prev() 方法可以移动到当前元素的前一个元素。</p>
-<p>还可以使用 moveTo(n) 方法直接移动到指定位置，这里的 n 表示要移动到第 n 个位置。</p>
-<p>currPos 属性表示列表中的当前位置。</p>
-<p>列表的<strong>抽象数据类型</strong>并未指明列表的存储结构，在本章的实现中，我们使用一个数组<br>dataStore 来存储元素。</p>
-<p>listSize （属性） 列表的元素个数</p>
-<p>pos （属性） 列表的当前位置</p>
-<p>length （属性） 返回列表中元素的个数</p>
-<p>clear （方法） 清空列表中的所有元素</p>
-<p>toString （方法） 返回列表的字符串形式</p>
-<p>getElement （方法） 返回当前位置的元素</p>
-<p>insert （方法） 在现有元素后插入新元素</p>
-<p>append （方法） 在列表的末尾添加新元素</p>
-<p>remove （方法） 从列表中删除元素</p>
-<p>front （方法） 将列表的当前位置设移动到第一个元素</p>
-<p>end （方法） 将列表的当前位置移动到最后一个元素</p>
-<p>prev （方法） 将当前位置后移一位</p>
-<p>next （方法） 将当前位置前移一位</p>
-<p>currPos （方法） 返回列表的当前位置</p>
-<p>moveTo （方法） 将当前位置移动到指定位置</p>
-<h1 id="实现列表类"><a href="#实现列表类" class="headerlink" title="实现列表类"></a>实现列表类</h1><p>直接实现一个 List 类。让我们从定义构造函数开始，虽然它本身并不是列表抽象数据类型定义的一部分：</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">List</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="keyword">this</span>.listSize = <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">this</span>.pos = <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">this</span>.dataStore = []; <span class="comment">// 初始化一个空数组来保存列表元素</span></span><br><span class="line">    <span class="keyword">this</span>.clear = clear;</span><br><span class="line">    <span class="keyword">this</span>.find = find;</span><br><span class="line">    <span class="keyword">this</span>.toString = toString;</span><br><span class="line">    <span class="keyword">this</span>.insert = insert;</span><br><span class="line">    <span class="keyword">this</span>.append = append;</span><br><span class="line">    <span class="keyword">this</span>.remove = remove;</span><br><span class="line">    <span class="keyword">this</span>.front = front;</span><br><span class="line">    <span class="keyword">this</span>.end = end;</span><br><span class="line">    <span class="keyword">this</span>.prev = prev;</span><br><span class="line">    <span class="keyword">this</span>.next = next;</span><br><span class="line">    <span class="keyword">this</span>.length = length;</span><br><span class="line">    <span class="keyword">this</span>.currPos = currPos;</span><br><span class="line">    <span class="keyword">this</span>.moveTo = moveTo;</span><br><span class="line">    <span class="keyword">this</span>.getElement = getElement;</span><br><span class="line">    <span class="keyword">this</span>.length = length;</span><br><span class="line">    <span class="keyword">this</span>.contains = contains;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h2 id="append-为列表添加元素"><a href="#append-为列表添加元素" class="headerlink" title="append()为列表添加元素"></a>append()为列表添加元素</h2><p>该方法给列表的下一个位置增加一个新的元素，这<br>个位置刚好等于变量 listSize 的值：</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">append</span>(<span class="params">element</span>) </span>&#123;</span><br><span class="line"><span class="keyword">this</span>.dataStore[<span class="keyword">this</span>.listSize++] = element;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h2 id="remove-删除元素"><a href="#remove-删除元素" class="headerlink" title="remove()删除元素"></a>remove()删除元素</h2><p> remove() 方法是 cList 类中较难实现的一个方法。<br>首先，需要在列表中找到该元素，然后删除它，并且调整底层的数组对象以填补删除该元素后留下的空白。<br>好消息是，可以使用 splice() 方法简化这一过程。让我们先从一个辅助方法 find() 开始，该方法用于查找要删除的元素：</p>
-<h3 id="ES6中有内置的find-方法，不要和这里搞混"><a href="#ES6中有内置的find-方法，不要和这里搞混" class="headerlink" title="ES6中有内置的find()方法，不要和这里搞混"></a>ES6中有内置的find()方法，不要和这里搞混</h3><p><code>array.find(function(currentValue, index, arr),thisValue)</code></p>
-<p>返回符合测试条件的第一个数组元素值，如果没有符合条件的则返回 undefined。</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">find</span>(<span class="params">element</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">var</span> i = <span class="number">0</span>; i &lt; <span class="keyword">this</span>.dataStore.length; ++i) &#123;</span><br><span class="line">        <span class="keyword">if</span> (<span class="keyword">this</span>.dataStore[i] == element) &#123;</span><br><span class="line">            <span class="keyword">return</span> i;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;<span class="comment">//找到元素，并返回下标</span></span><br><span class="line">        <span class="keyword">return</span> <span class="number">-1</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>find() 方法通过对数组对象 dataStore 进行迭代，查找给定的元素。如果找到，就返回该元素在列表中的位置，否则返回 -1，这是在数组中找不到指定元素时返回的标准值。我们可以在 remove() 方法中利用此值做错误校验。</p>
-<p>remove() 方法使用 find() 方法返回的位置对数组 dataStore 进行截取。</p>
-<p>数组改变后，将变量 listSize 的值减 1，以反映列表的最新长度。如果元素删除成功，该方法返回 true ，否则返回 false </p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">remove</span>(<span class="params">element</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">var</span> foundAt = <span class="keyword">this</span>.find(element);</span><br><span class="line">    <span class="keyword">if</span> (foundAt &gt; <span class="number">-1</span>) &#123;</span><br><span class="line">        <span class="keyword">this</span>.dataStore.splice(foundAt,<span class="number">1</span>);</span><br><span class="line">        --<span class="keyword">this</span>.listSize;</span><br><span class="line">        <span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">    &#125;</span><br><span class="line">        <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h2 id="length-返回元素个数"><a href="#length-返回元素个数" class="headerlink" title="length 返回元素个数"></a>length 返回元素个数</h2><p>length() 方法返回列表中元素的个数：</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">length</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="keyword">this</span>.listSize;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h2 id="toString-显示列表中的元素"><a href="#toString-显示列表中的元素" class="headerlink" title="toString 显示列表中的元素"></a>toString 显示列表中的元素</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">toString</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="keyword">this</span>.dataStore;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>严格说来，该方法返回的是一个数组，而不是一个字符串，但它的目的是为了显示列表的<br>当前状态，因此返回一个数组就足够了。</p>
-<h2 id="insert-：向列表中插入一个元素"><a href="#insert-：向列表中插入一个元素" class="headerlink" title="insert ：向列表中插入一个元素"></a>insert ：向列表中插入一个元素</h2><p> insert() 方法需要知道将元素插入到什么位置，因此现在<br>我们假设插入是指插入到列表中某个元素之后。知道了这些，就可以定义 insert() 方法了：</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">insert</span>(<span class="params">element, after</span>) </span>&#123;</span><br><span class="line"><span class="keyword">var</span> insertPos = <span class="keyword">this</span>.find(after);</span><br><span class="line"><span class="keyword">if</span> (insertPos &gt; <span class="number">-1</span>) &#123;</span><br><span class="line"><span class="keyword">this</span>.dataStore.splice(insertPos+<span class="number">1</span>, <span class="number">0</span>, element);</span><br><span class="line">++<span class="keyword">this</span>.listSize;</span><br><span class="line"><span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>在实现中， insert() 方法用到了 find() 方法， find() 方法会寻找传入的 after 参数在列<br>表中的位置，找到该位置后，使用 splice() 方法将新元素插入该位置之后，然后将变量<br>listSize 加 1 并返回 true ，表明插入成功。</p>
-<h2 id="clear-：清空列表中所有的元素"><a href="#clear-：清空列表中所有的元素" class="headerlink" title="clear ：清空列表中所有的元素"></a>clear ：清空列表中所有的元素</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">clear</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="keyword">delete</span> <span class="keyword">this</span>.dataStore;</span><br><span class="line">    <span class="keyword">this</span>.dataStore = [];</span><br><span class="line">    <span class="keyword">this</span>.listSize = <span class="keyword">this</span>.pos = <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>clear() 方法使用 delete 操作符删除数组 dataStore ，接着在下一行创建一个空数组。最后一行将 listSize 和 pos 的值设为 1，表明这是一个新的空列表。</p>
-<h2 id="contains-：判断给定值是否在列表中"><a href="#contains-：判断给定值是否在列表中" class="headerlink" title="contains ：判断给定值是否在列表中"></a>contains ：判断给定值是否在列表中</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">contains</span>(<span class="params">element</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">var</span> i = <span class="number">0</span>; i &lt; <span class="keyword">this</span>.dataStore.length; ++i) &#123;</span><br><span class="line">        <span class="keyword">if</span> (<span class="keyword">this</span>.dataStore[i] == element) &#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">        <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h2 id="遍历列表"><a href="#遍历列表" class="headerlink" title="遍历列表"></a>遍历列表</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">front</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="keyword">this</span>.pos = <span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">end</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="keyword">this</span>.pos = <span class="keyword">this</span>.listSize<span class="number">-1</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">prev</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="keyword">if</span> (<span class="keyword">this</span>.pos &gt; <span class="number">0</span>) &#123;</span><br><span class="line">    --<span class="keyword">this</span>.pos;</span><br><span class="line">&#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">next</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="keyword">if</span> (<span class="keyword">this</span>.pos &lt; <span class="keyword">this</span>.listSize<span class="number">-1</span>) &#123;</span><br><span class="line">        ++<span class="keyword">this</span>.pos;</span><br><span class="line">&#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">currPos</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="keyword">this</span>.pos;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">moveTo</span>(<span class="params">position</span>) </span>&#123;</span><br><span class="line">        <span class="keyword">this</span>.pos = position;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">getElement</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="keyword">this</span>.dataStore[<span class="keyword">this</span>.pos];</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>创建一个由姓名组成的列表</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">var names &#x3D; new List();</span><br><span class="line">names.append(&quot;Clayton&quot;);</span><br><span class="line">names.append(&quot;Raymond&quot;);</span><br><span class="line">names.append(&quot;Cynthia&quot;);</span><br><span class="line">names.append(&quot;Jennifer&quot;);</span><br><span class="line">names.append(&quot;Bryan&quot;);</span><br><span class="line">names.append(&quot;Danny&quot;);</span><br></pre></td></tr></table></figure>
-<p>移动到列表中的第一个元素并且显示它：</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">names.front();</span><br><span class="line">print(names.getElement()); <span class="comment">// 显示 Clayton</span></span><br></pre></td></tr></table></figure>
-<h2 id="使用迭代器访问列表"><a href="#使用迭代器访问列表" class="headerlink" title="使用迭代器访问列表"></a>使用迭代器访问列表</h2><p>看一个使用迭代器遍历列表的例子：</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span>(names.front(); names.currPos() &lt; names.length(); names.next()) &#123;</span><br><span class="line">    print(names.getElement());</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>在 for 循环的一开始，将列表的当前位置设置为第一个元素。只要 currPos 的值小于列表的长度，就一直循环，每一次循环都调用 next() 方法将当前位置向前移动一位。<br>同理，还可以从后向前遍历列表，代码如下：</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span>(names.end(); names.currPos() &gt;= <span class="number">0</span>; names.prev()) &#123;</span><br><span class="line">    print(names.getElement());</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>循环从列表的最后一个元素开始，当当前位置大于或等于 0 时，调用 prev() 方法后移一位。<br>迭代器只是用来在列表上随意移动，而不应该和任何为列表增加或删除元素的方法一起使用。</p>
-
+        <h1 id="列表"><a href="#列表" class="headerlink" title="列表"></a>列表</h1>
+        
+          <a class="article-more-a" href="/2020/05/19/%E5%88%97%E8%A1%A8/#more">more >></a>
+        
       
 
       
@@ -579,71 +468,6 @@
       
         <p class="article-more-link">
           <a class="article-more-a" href="/2020/05/19/%E5%88%97%E8%A1%A8/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-数组" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/05/18/%E6%95%B0%E7%BB%84/">数组</a>
-    </h1>
-  
-
-        
-        <a href="/2020/05/18/%E6%95%B0%E7%BB%84/" class="archive-article-date">
-  	<time datetime="2020-05-18T11:17:13.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-05-18</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h1 id="数组"><a href="#数组" class="headerlink" title="数组"></a>数组</h1>
-        
-          <a class="article-more-a" href="/2020/05/18/%E6%95%B0%E7%BB%84/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2020/05/18/%E6%95%B0%E7%BB%84/">展开全文 >></a>
         </p>
       
 
@@ -709,6 +533,71 @@
       
         <p class="article-more-link">
           <a class="article-more-a" href="/2020/05/18/%E6%9E%84%E9%80%A0%E5%87%BD%E6%95%B0/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-数组" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/05/18/%E6%95%B0%E7%BB%84/">数组</a>
+    </h1>
+  
+
+        
+        <a href="/2020/05/18/%E6%95%B0%E7%BB%84/" class="archive-article-date">
+  	<time datetime="2020-05-18T11:17:13.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-05-18</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="数组"><a href="#数组" class="headerlink" title="数组"></a>数组</h1>
+        
+          <a class="article-more-a" href="/2020/05/18/%E6%95%B0%E7%BB%84/#more">more >></a>
+        
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2020/05/18/%E6%95%B0%E7%BB%84/">展开全文 >></a>
         </p>
       
 
