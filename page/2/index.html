@@ -10,7 +10,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta property="og:type" content="website">
 <meta property="og:title" content="Hexo">
-<meta property="og:url" content="http://yoursite.com/index.html">
+<meta property="og:url" content="http://yoursite.com/page/2/index.html">
 <meta property="og:site_name" content="Hexo">
 <meta property="og:locale" content="en_US">
 <meta property="article:author" content="悦崽">
@@ -172,820 +172,19 @@
           <div id="js-content" class="content-ll">
             
   
-    <article id="post-css" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+    <article id="post-数组" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2020/05/26/css/">css</a>
+      <a class="article-title" href="/2020/05/18/%E6%95%B0%E7%BB%84/">数组</a>
     </h1>
   
 
         
-        <a href="/2020/05/26/css/" class="archive-article-date">
-  	<time datetime="2020-05-26T08:26:30.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-05-26</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>background-color 不能继承，其默认值是<br>如果需要在页面上对背景图像进行平铺，可以使用 background-repeat 属性。</p>
-<p>背景定位<br>可以利用 background-position 属性改变图像在背景中的位置。</p>
-<p>背景关联<br>如果文档比较长，那么当文档向下滚动时，背景图像也会随之滚动。当文档滚动到超过图像的位置时，图像就会消失。</p>
-<p>您可以通过 background-attachment 属性防止这种滚动。通过这个属性，可以声明图像相对于可视区是固定的（fixed）</p>
-<p>text-indent 属性，所有元素的第一行都可以缩进一个给定的长度，甚至该长度可以是负值。</p>
-<p>注意：一般来说，可以为所有块级元素应用 text-indent，但无法将该属性应用于行内元素，图像之类的替换元素上也无法应用 text-indent 属性。不过，如果一个块级元素（比如段落）的首行中有一个图像，它会随该行的其余文本移动。</p>
-<p>提示：如果想把一个行内元素的第一行“缩进”，可以用左内边距或外边距创造这种效果。</p>
-<p>text-indent 属性可以继承</p>
-<p>水平对齐<br>text-align 是一个基本的属性，它会影响一个元素中的文本行互相之间的对齐方式。它的前 3 个值相当直接，不过第 4 个和第 5 个则略有些复杂。</p>
-<p>值 left、right 和 center 会导致元素中的文本分别左对齐、右对齐和居中。</p>
-<p>提示：将块级元素或表元素居中，要通过在这些元素上适当地设置左、右外边距来实现。</p>
-<p>text-align:center 与 <code>&lt;CENTER&gt;</code><br>您可能会认为 text-align:center 与<code>&lt;CENTER&gt;</code> 元素的作用一样，但实际上二者大不相同。</p>
-<p><code>&lt;CENTER&gt;</code>不仅影响文本，还会把整个元素居中。text-align 不会控制元素的对齐，而只影响内部内容。元素本身不会从一段移到另一端，只是其中的文本受影响。</p>
-<p>justify<br>最后一个水平对齐属性是 justify。</p>
-<p>在两端对齐文本中，文本行的左右两端都放在父元素的内边界上。然后，调整单词和字母间的间隔，使各行的长度恰好相等。您也许已经注意到了，两端对齐文本在打印领域很常见。</p>
-<p>字间隔<br>word-spacing 属性可以改变字（单词）之间的标准间隔。其默认值 normal 与设置值为 0 是一样的。</p>
-<p>字符转换<br>text-transform 属性处理文本的大小写。这个属性有 4 个值：</p>
-<p>none<br>uppercase<br>lowercase<br>capitalize</p>
-<p>文本装饰<br>接下来，我们讨论 text-decoration 属性，这是一个很有意思的属性，它提供了很多非常有趣的行为。</p>
-<p>text-decoration 有 5 个值：</p>
-<p>none<br>underline<br>overline<br>line-through<br>blink</p>
-<p>处理空白符<br>white-space 属性会影响到用户代理对源文档中的空格、换行和 tab 字符的处理。<br>p {white-space: normal;}<br>如果 white-space 属性的值为 pre，浏览器将会注意额外的空格，甚至回车<br>当 white-space 属性设置为 pre-wrap 时，浏览器不仅会保留空白符并保留换行符，还允许自动换行。<br>注释：当 white-space 属性设置为 pre-line 时，浏览器会保留换行符，并允许自动换行，但是会合并空白符，这是与 pre-wrap 值的不同之处。</p>
-<p>文本方向<br>direction 属性影响块级元素中文本的书写方向、表中列布局的方向、内容水平填充其元素框的方向、以及两端对齐元素中最后一行的位置。<br>direction 属性有两个值：ltr 和 rtl。大多数情况下，默认值是 ltr，显示从左到右的文本。如果显示从右到左的文本，应使用值 rtl。</p>
-<h1 id="字体"><a href="#字体" class="headerlink" title="字体"></a>字体</h1><p>使用 font-family 属性 定义文本的字体系列。<br>我们建议在所有 font-family 规则中都提供一个通用字体系列。这样就提供了一条后路，在用户代理无法提供与规则匹配的特定字体时，就可以选择一个候选字体。</p>
-<p>如果您对字体非常熟悉，也可以为给定的元素指定一系列类似的字体。要做到这一点，需要把这些字体按照优先顺序排列，然后用逗号进行连接：<br>只有当字体名中有一个或多个空格（比如 New York），或者如果字体名包括 # 或 $ 之类的符号，才需要在 font-family 声明中加引号。</p>
-<p>font-style 属性最常用于规定斜体文本。</p>
-<p>该属性有三个值：</p>
-<p>normal - 文本正常显示<br>italic - 文本斜体显示<br>oblique - 文本倾斜显示</p>
-<h2 id="字体变形"><a href="#字体变形" class="headerlink" title="字体变形"></a>字体变形</h2><p>font-variant 属性可以设定小型大写字母。</p>
-<p>小型大写字母不是一般的大写字母，也不是小写字母，这种字母采用不同大小的大写字母。<br>font-variant: small-caps</p>
-<h2 id="字体加粗"><a href="#字体加粗" class="headerlink" title="字体加粗"></a>字体加粗</h2><p>font-weight 属性设置文本的粗细。</p>
-<p>使用 bold 关键字可以将文本设置为粗体。</p>
-<p>关键字 100 ~ 900 为字体指定了 9 级加粗度。如果一个字体内置了这些加粗级别，那么这些数字就直接映射到预定义的级别，100 对应最细的字体变形，900 对应最粗的字体变形。数字 400 等价于 normal，而 700 等价于 bold。</p>
-<p>如果将元素的加粗设置为 bolder，浏览器会设置比所继承值更粗的一个字体加粗。与此相反，关键词 lighter 会导致浏览器将加粗度下移而不是上移。</p>
-<h2 id="字体大小"><a href="#字体大小" class="headerlink" title="字体大小"></a>字体大小</h2><p>font-size 属性设置文本的大小。<br>使用 em 来设置字体大小：<br>W3C 推荐使用 em 尺寸单位。</p>
-<p>1em 等于当前的字体尺寸。如果一个元素的 font-size 为 16 像素，那么对于该元素，1em 就等于 16 像素。在设置字体大小时，em 的值会相对于父元素的字体大小改变。</p>
-<p>浏览器中默认的文本大小是 16 像素。因此 1em 的默认尺寸是 16 像素。</p>
-<p>可以使用下面这个公式将像素转换为 em：pixels/16=em</p>
-<p>（注：16 等于父元素的默认字体大小，假设父元素的 font-size 为 20px，那么公式需改为：pixels/20=em）</p>
-<p>实例</p>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">h1 &#123;font-size:3.75em;&#125; /* 60px/16=3.75em */</span><br><span class="line">h2 &#123;font-size:2.5em;&#125;  /* 40px/16=2.5em */</span><br><span class="line">p &#123;font-size:0.875em;&#125; /* 14px/16=0.875em */</span><br></pre></td></tr></table></figure>
-<p>结合使用百分比和 EM<br>在所有浏览器中均有效的方案是为 body 元素（父元素）以百分比设置默认的 font-size 值：</p>
-<p>实例</p>
-<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">body</span> &#123;<span class="attribute">font-size</span>:<span class="number">100%</span>;&#125;</span><br><span class="line"><span class="selector-tag">h1</span> &#123;<span class="attribute">font-size</span>:<span class="number">3.75em</span>;&#125;</span><br><span class="line"><span class="selector-tag">h2</span> &#123;<span class="attribute">font-size</span>:<span class="number">2.5em</span>;&#125;</span><br><span class="line"><span class="selector-tag">p</span> &#123;<span class="attribute">font-size</span>:<span class="number">0.875em</span>;&#125;</span><br></pre></td></tr></table></figure>
-
-<h1 id="CSS-链接"><a href="#CSS-链接" class="headerlink" title="CSS 链接"></a>CSS 链接</h1><p>链接的四种状态：</p>
-<pre>
-a:link - 普通的、未被访问的链接
-a:visited - 用户已访问的链接
-a:hover - 鼠标指针位于链接的上方
-a:active - 链接被点击的时刻
-</pre>
-<p>当为链接的不同状态设置样式时，请按照以下次序规则：</p>
-<p>a:hover 必须位于 a:link 和 a:visited 之后</p>
-<p>a:active 必须位于 a:hover 之后</p>
-<h1 id="CSS-列表"><a href="#CSS-列表" class="headerlink" title="CSS 列表"></a>CSS 列表</h1><p>要影响列表的样式，最简单（同时支持最充分）的办法就是改变其标志类型。</p>
-<p>例如，在一个无序列表中，列表项的标志 (marker) 是出现在各列表项旁边的圆点。在有序列表中，标志可能是字母、数字或另外某种计数体系中的一个符号。</p>
-<p>要修改用于列表项的标志类型，可以使用属性 <code>list-style-type：</code><br>列表项图像<br>有时，常规的标志是不够的。你可能想对各标志使用一个图像，这可以利用 list-style-image 属性做到：</p>
-<p><code>ul li {list-style-image : url(xxx.gif)}</code><br>CSS2.1 可以确定标志出现在列表项内容之外还是内容内部。这是利用 <code>list-style-position</code> 完成的。</p>
-<p>综合：<code>li {list-style : url(example.gif) square inside}</code>(可以按任何顺序)</p>
-<h1 id="CSS-表格"><a href="#CSS-表格" class="headerlink" title="CSS 表格"></a>CSS 表格</h1><p>表格边框<br>如需在 CSS 中设置表格边框，请使用 border 属性。<br>上例中的表格具有双线条边框。这是由于 table、th 以及 td 元素都有独立的边框。</p>
-<p>如果需要把表格显示为单线条边框，请使用 border-collapse 属性。<br>折叠边框<br>border-collapse 属性设置是否将表格边框折叠为单一边框：</p>
-<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">table</span></span><br><span class="line">  &#123;</span><br><span class="line">  <span class="attribute">border-collapse</span>:collapse;</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-tag">table</span>,<span class="selector-tag">th</span>, <span class="selector-tag">td</span></span><br><span class="line">  &#123;</span><br><span class="line">  <span class="attribute">border</span>: <span class="number">1px</span> solid black;</span><br><span class="line">  &#125;</span><br></pre></td></tr></table></figure>
-<p>vertical-align 属性设置垂直对齐方式，比如顶部对齐、底部对齐或居中对齐：</p>
-<p>border-spacing    设置分隔单元格边框的距离。</p>
-<p>caption-side    设置表格标题的位置。</p>
-<p>empty-cells    设置是否显示表格中的空单元格</p>
-<p>table-layout    设置显示单元、行和列的算法。</p>
-<h1 id="CSS-轮廓"><a href="#CSS-轮廓" class="headerlink" title="CSS 轮廓"></a>CSS 轮廓</h1><p>outline    在一个声明中设置所有的轮廓属性。    </p>
-<p>outline-color    设置轮廓的颜色。</p>
-<p>outline-style    设置轮廓的样式。</p>
-<p>outline-width    设置轮廓的宽度。</p>
-<h1 id="CSS-框模型概述"><a href="#CSS-框模型概述" class="headerlink" title="CSS 框模型概述"></a>CSS 框模型概述</h1><p>margin把附近的元素分离开<br>padding会让自己的大小变化，会撑大元素本身</p>
-<h2 id="CSS-padding"><a href="#CSS-padding" class="headerlink" title="CSS padding"></a>CSS padding</h2><p>属性定义元素边框与元素内容之间的空白区域。<br>padding 属性接受长度值或百分比值（相对于父元素的width计算），但不允许使用负值。</p>
-<p><code>注意：上下内边距与左右内边距一致；即上下内边距的百分数会相对于父元素宽度设置，而不是相对于高度。</code></p>
-<p>例如，如果您希望所有 h1 元素的各边都有 10 像素的内边距，只需要这样：</p>
-<p>h1 {padding: 10px;}</p>
-<p>您还可以按照上、右、下、左的顺序分别设置各边的内边距，各边均可以使用不同的单位或百分比值：</p>
-<p>也通过使用下面四个单独的属性，分别设置上、右、下、左内边距：</p>
-<p>padding-top </p>
-<p>padding-right </p>
-<p>padding-bottom  </p>
-<p>padding-left  </p>
-<h2 id="边框与背景"><a href="#边框与背景" class="headerlink" title="边框与背景"></a>边框与背景</h2><p>CSS 规范指出，边框绘制在“元素的背景之上”。这很重要，因为有些边框是“间断的”（例如，点线边框或虚线框），元素的背景应当出现在边框的可见部分之间。<br>CSS2 指出背景只延伸到内边距，而不是边框。后来 CSS2.1 进行了更正：元素的背景是内容、内边距和边框区的背景。大多数浏览器都遵循 CSS2.1 定义，不过一些较老的浏览器可能会有不同的表现。</p>
-<p>CSS 的 border-style 属性定义了 10 个不同的非 inherit 样式，包括 none。<br>也可以为一个边框的上右下左同时分别定义四种边框样式<br>p.aside {border-style: solid dotted dashed double;}</p>
-<p>也可以单独设置：<br>border-top-style<br>border-right-style<br>border-bottom-style<br>border-left-style</p>
-<h2 id="边框的宽度"><a href="#边框的宽度" class="headerlink" title="边框的宽度"></a>边框的宽度</h2><p>您可以通过 border-width 属性为边框指定宽度。</p>
-<p>为边框指定宽度有两种方法：可以指定长度值，比如 2px 或 0.1em；或者使用 3 个关键字之一，它们分别是 thin 、medium（默认值） 和 thick。</p>
-<p>如果要声明边框宽度一定要声明边框样式，因为他默认是none</p>
-<h2 id="边框的颜色"><a href="#边框的颜色" class="headerlink" title="边框的颜色"></a>边框的颜色</h2><p>设置边框颜色非常简单。CSS 使用一个简单的 border-color 属性，它一次可以接受最多 4 个颜色值。<br>定义单边颜色<br>还有一些单边边框颜色属性。它们的原理与单边样式和宽度属性相同：</p>
-<p>border-top-color<br>border-right-color<br>border-bottom-color<br>border-left-color</p>
-<h2 id="透明边框"><a href="#透明边框" class="headerlink" title="透明边框"></a>透明边框</h2><p>我们刚才讲过，如果边框没有样式，就没有宽度。不过有些情况下您可能希望创建一个不可见的边框。</p>
-<p>CSS2 引入了边框颜色值 transparent。这个值用于创建有宽度的不可见边框。请看下面的例子：<br>   border-style: solid;<br>  border-width: 5px;<br>  border-color: transparent;</p>
-<h1 id="CSS-外边距"><a href="#CSS-外边距" class="headerlink" title="CSS 外边距"></a>CSS 外边距</h1><p>围绕在元素边框的空白区域是外边距。设置外边距会在元素外创建额外的“空白”。</p>
-<p>设置外边距的最简单的方法就是使用 margin 属性，这个属性接受任何长度单位、百分数值甚至负值。（padding不可以接受负值）</p>
-<p>margin 设置一个百分比数值：</p>
-<p>p {margin : 10%;}<br>百分数是相对于父元素的 width 计算的。上面这个例子为 p 元素设置的外边距是其父元素的 width 的 10%。</p>
-<p>margin 的默认值是 0，所以如果没有为 margin 声明一个值，就不会出现外边距。但是，在实际中，浏览器对许多元素已经提供了预定的样式，外边距也不例外。例如，在支持 CSS 的浏览器中，外边距会在每个段落元素的上面和下面生成“空行”。因此，如果没有为 p 元素声明外边距，浏览器可能会自己应用一个外边距。当然，只要你特别作了声明，就会覆盖默认样式。</p>
-<h1 id="值复制"><a href="#值复制" class="headerlink" title="值复制"></a>值复制</h1><p>有时，我们会输入一些重复的值：</p>
-<p>p {margin: 0.5em 1em 0.5em 1em;}<br>通过值复制，您可以不必重复地键入这对数字。上面的规则与下面的规则是等价的：</p>
-<p>p {margin: 0.5em 1em;}</p>
-<p>CSS 定义了一些规则，允许为外边距指定少于 4 个值。规则如下：</p>
-<p>如果缺少左外边距的值，则使用右外边距的值。<br>如果缺少下外边距的值，则使用上外边距的值。<br>如果缺少右外边距的值，则使用上外边距的值。  </p>
-<h1 id="CSS-外边距合并"><a href="#CSS-外边距合并" class="headerlink" title="CSS 外边距合并"></a>CSS 外边距合并</h1><p>外边距合并指的是，当两个垂直外边距相遇时，它们将形成一个外边距。</p>
-<p>合并后的外边距的高度等于两个发生合并的外边距的高度中的较大者。<br>当一个元素包含在另一个元素中时（假设没有内边距或边框把外边距分隔开），它们的上和/或下外边距也会发生合并。</p>
-<p>外边距甚至可以与自身发生合并。<br>假设有一个空元素，它有外边距，但是没有边框或填充。在这种情况下，上外边距与下外边距就碰到了一起，它们会发生合并：<br><img src="img/8.png" alt="avatar"><br>这就是一系列的段落元素占用空间非常小的原因，因为它们的所有外边距都合并到一起，形成了一个小的外边距。</p>
-<p>外边距合并初看上去可能有点奇怪，但是实际上，它是有意义的。以由几个段落组成的典型文本页面为例。第一个段落上面的空间等于段落的上外边距。如果没有外边距合并，后续所有段落之间的外边距都将是相邻上外边距和下外边距的和。这意味着段落之间的空间是页面顶部的两倍。如果发生外边距合并，段落之间的上外边距和下外边距就合并在一起，这样各处的距离就一致了。<br><img src="img/9.png" alt="avatar"></p>
-<p>注释：只有普通文档流中块框的垂直外边距才会发生外边距合并。行内框、浮动框或绝对定位之间的外边距不会合并。</p>
-<h1 id="CSS定位"><a href="#CSS定位" class="headerlink" title="CSS定位"></a>CSS定位</h1><p>定位的基本思想很简单，它允许你定义元素框相对于其正常位置应该出现的位置，或者相对于父元素、另一个元素甚至浏览器窗口本身的位置。</p>
-<p>一切皆为框<br>div、h1 或 p 元素常常被称为块级元素。这意味着这些元素显示为一块内容，即“块框”。与之相反，span 和 strong 等元素称为“行内元素”，这是因为它们的内容显示在行中，即“行内框”。</p>
-<p>您可以使用 display 属性改变生成的框的类型。这意味着，通过将 display 属性设置为 block，可以让行内元素（比如 <code>&lt;a&gt;</code> 元素）表现得像块级元素一样。还可以通过把 display 设置为 none，让生成的元素根本没有框。这样的话，该框及其所有内容就不再显示，不占用文档中的空间。</p>
-<p>但是在一种情况下，即使没有进行显式定义，也会创建块级元素。这种情况发生在把一些文本添加到一个块级元素（比如 div）的开头。即使没有把这些文本定义为段落，它也会被当作段落对待：</p>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span>&gt;</span></span><br><span class="line">some text</span><br><span class="line"><span class="tag">&lt;<span class="name">p</span>&gt;</span>Some more text.<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
-<p>在这种情况下，这个框称为无名块框，因为它不与专门定义的元素相关联。</p>
-<p>块级元素的文本行也会发生类似的情况。假设有一个包含三行文本的段落。每行文本形成一个无名框。无法直接对无名块或行框应用样式，因为没有可以应用样式的地方（注意，行框和行内框是两个概念）。但是，这有助于理解在屏幕上看到的所有东西都形成某种框。</p>
-<h1 id="CSS-定位机制"><a href="#CSS-定位机制" class="headerlink" title="CSS 定位机制"></a>CSS 定位机制</h1><p>CSS 有三种基本的定位机制：普通流、浮动和绝对定位。</p>
-<p>除非专门指定，否则所有框都在普通流中定位。也就是说，普通流中的元素的位置由元素在 (X)HTML 中的位置决定。</p>
-<p>块级框<code>从上到下</code>一个接一个地排列，框之间的垂直距离是由框的垂直外边距计算出来。</p>
-<p>行内框在一行中水平布置。可以使用水平内边距、边框和外边距调整它们的间距。</p>
-<p>但是，垂直内边距、边框和外边距不影响行内框的高度。由一行形成的水平框称为行框（Line Box），行框的高度总是足以容纳它包含的所有行内框。不过，设置行高可以增加这个框的高度。</p>
-<h1 id="CSS-position-属性"><a href="#CSS-position-属性" class="headerlink" title="CSS position 属性"></a>CSS position 属性</h1><p>position 属性值的含义：</p>
-<p>static<br>元素框正常生成。块级元素生成一个矩形框，作为文档流的一部分，行内元素则会创建一个或多个行框，置于其父元素中。</p>
-<p>relative<br>元素框偏移某个距离。元素仍保持其未定位前的形状，它原本所占的空间仍保留。</p>
-<p>absolute<br>元素框<code>从文档流完全删除</code>，并相对于其包含块定位。包含块可能是文档中的另一个元素或者是初始包含块。元素原先在正常文档流中所占的空间会关闭，就好像元素原来不存在一样。元素定位后生成一个<code>块级框</code>，而不论原来它在正常流中生成何种类型的框。</p>
-<p>fixed<br>元素框的表现类似于将 position 设置为 absolute，不过其包含块是视窗本身。<br>提示：相对定位实际上被看作普通流定位模型的一部分，因为元素的位置相对于它在普通流中的位置。</p>
-<h2 id="CSS-相对定位"><a href="#CSS-相对定位" class="headerlink" title="CSS 相对定位"></a>CSS 相对定位</h2><p>相对定位是一个非常容易掌握的概念。如果对一个元素进行相对定位，它将出现在它所在的位置上。然后，可以通过设置垂直或水平位置，让这个元素“相对于”它的<code>起点</code>进行移动。</p>
-<p>注意，在使用相对定位时，无论是否进行移动，<code>元素仍然占据原来的空间</code>。因此，移动元素会导致它覆盖其它框。</p>
-<p><img src="img/10.png" alt="avatar"></p>
-<h2 id="CSS-绝对定位"><a href="#CSS-绝对定位" class="headerlink" title="CSS 绝对定位"></a>CSS 绝对定位</h2><p>设置为绝对定位的元素框从文档流完全删除，并相对于其包含块定位，包含块可能是文档中的另一个元素或者是初始包含块。元素原先在正常文档流中所占的空间会关闭，就好像该元素原来不存在一样。元素定位后生成一个块级框，而不论原来它在正常流中生成何种类型的框。<br><img src="img/11.png" alt="avatar"><br>为1设置绝对定位，给一个top值，2,3就会向左移动（相对定位的2的位置依然被占据,继续调整位置可以遮盖3但不能遮盖2</p>
-<p>绝对定位使元素的位置与文档流无关，因此不占据空间。这一点与相对定位不同，相对定位实际上被看作普通流定位模型的一部分，因为元素的位置相对于它在普通流中的位置。</p>
-<p>绝对定位的元素的位置相对于<code>最近的已定位祖先元素</code>，(所以子绝父相）如果元素没有已定位的祖先元素，那么它的位置相对于最初的包含块。</p>
-<p>相对定位是“相对于”元素在文档中的初始位置，<br>而绝对定位是“相对于”最近的已定位祖先元素，如果不存在已定位的祖先元素，那么“相对于”最初的包含块。</p>
-<p>注释：根据用户代理的不同，最初的包含块可能是画布或 HTML 元素。</p>
-<p>提示：因为绝对定位的框与文档流无关，所以它们可以覆盖页面上的其它元素。可以通过设置 <code>z-index</code> 属性来控制这些框的堆放次序。</p>
-<h1 id="CSS-浮动"><a href="#CSS-浮动" class="headerlink" title="CSS 浮动"></a>CSS 浮动</h1><p>浮动的框可以向左或向右移动，直到它的外边缘碰到包含框或另一个浮动框的边框为止。</p>
-<p>由于浮动框不在文档的普通流中，所以文档的普通流中的块框表现得就像浮动框不存在一样。<br>如果包含框太窄，无法容纳水平排列的三个浮动元素，那么其它浮动块向下移动，直到有足够的空间。如果浮动元素的高度不同，那么当它们向下移动时可能被其它浮动元素“卡住”</p>
-<p>浮动与绝对定位的区别：<br>放置三个div(块级元素)<br><img src="img/14.png" alt="avatar">正常状态是这样摆放的</p>
-<p>当为第一个盒子添加绝对定位：<br><img src="img/15.png" alt="avatar">，大小改变并遮住了div2；</p>
-<p>当为第一个添加浮动：<br><img src="img/16.png" alt="avatar"></p>
-<p>把div改成span（行内块）试试<br>正常：<br><img src="img/17.png" alt="avatar"> </p>
-<p>这里第一个盒子用了绝对定位，遮住了第二个盒子<img src="img/12.png" alt="avatar"></p>
-<p>这里第一个用了浮动，<br><img src="img/13.png" alt="avatar"></p>
-<h2 id="行框和清理"><a href="#行框和清理" class="headerlink" title="行框和清理"></a>行框和清理</h2><p>浮动框旁边的行框被缩短，从而给浮动框留出空间，行框围绕浮动框。</p>
-<p>因此，创建浮动框可以使文本围绕图像：<br><img src="img/18.png" alt="avatar"></p>
-<p>要想阻止行框围绕浮动框，需要对该框应用 clear 属性。clear 属性的值可以是 left、right、both 或 none，它表示框的哪些边不应该挨着浮动框。在 CSS1 和 CSS2 中，这是通过自动为清除元素（即设置了 clear 属性的元素）增加上外边距实现的。在 CSS2.1 中，会在元素上外边距之上增加清除空间，而外边距本身并不改变。不论哪一种改变，最终结果都一样，如果声明为左边或右边清除，会使元素的上外边框边界刚好在该边上浮动元素的下外边距边界之下。<br>。</p>
-<p>假设希望让一个图片浮动到文本块的左边，并且希望这幅图片和文本包含在另一个具有背景颜色和边框的元素中。您可能编写下面的代码：</p>
-<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.news</span> &#123;</span><br><span class="line">  <span class="attribute">background-color</span>: gray;</span><br><span class="line">  <span class="attribute">border</span>: solid <span class="number">1px</span> black;</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-class">.news</span> <span class="selector-tag">img</span> &#123;</span><br><span class="line">  <span class="attribute">float</span>: left;</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-class">.news</span> <span class="selector-tag">p</span> &#123;</span><br><span class="line">  <span class="attribute">float</span>: right;</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">&lt;div class="news"&gt;</span><br><span class="line">&lt;img src="news-pic.jpg" /&gt;</span><br><span class="line">&lt;p&gt;some text&lt;/p&gt;</span><br><span class="line"></span><br><span class="line">&lt;/div&gt;</span><br></pre></td></tr></table></figure>
-<p>这种情况下，出现了一个问题。因为浮动元素脱离了文档流，所以包围图片和文本的 div 不占据空间。</p>
-<p>如何让包围元素在视觉上包围浮动元素呢？需要在这个元素中的某个地方应用 clear</p>
-<p>可以在底部放一个空盒子，为这个空盒子设置clear:both<br>但是需要添加多余的代码</p>
-<p>不过我们还有另一种办法，那就是对容器 div 进行浮动：<br>这样会得到我们希望的效果。不幸的是，下一个元素会受到这个浮动元素的影响。为了解决这个问题，有些人选择对布局中的所有东西进行浮动，然后使用适当的有意义的元素（常常是站点的页脚）对这些浮动进行清理。这有助于减少或消除不必要的标记。</p>
-<h1 id="CSS选择器"><a href="#CSS选择器" class="headerlink" title="CSS选择器"></a>CSS选择器</h1><h2 id="CSS-多类选择器"><a href="#CSS-多类选择器" class="headerlink" title="CSS 多类选择器"></a>CSS 多类选择器</h2><p>个 class 值中可能包含一个词列表，各个词之间用空格分隔。例如，如果希望将一个特定的元素同时标记为重要（important）和警告（warning）<br>假设 class 为 important 的所有元素都是粗体，而 class 为 warning 的所有元素为斜体，class 中同时包含 important 和 warning 的所有元素还有一个银色的背景 。就可以写作：</p>
-<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.important</span> &#123;<span class="attribute">font-weight</span>:bold;&#125;</span><br><span class="line"><span class="selector-class">.warning</span> &#123;<span class="attribute">font-style</span>:italic;&#125;</span><br><span class="line"><span class="selector-class">.important</span><span class="selector-class">.warning</span> &#123;<span class="attribute">background</span>:silver;&#125;</span><br></pre></td></tr></table></figure>
-
-<h2 id="类选择器还是-ID-选择器？"><a href="#类选择器还是-ID-选择器？" class="headerlink" title="类选择器还是 ID 选择器？"></a>类选择器还是 ID 选择器？</h2><p>区别 1：只能在文档中使用一次<br>与类不同，在一个 HTML 文档中，ID 选择器会<code>使用一次，而且仅一次。</code></p>
-<p>区别 2：不能使用 ID 词列表<br>不同于类选择器，ID 选择器不能结合使用，因为 ID 属性不允许有以空格分隔的词列表。</p>
-<p>区别 3：ID 能包含更多含义<br>类似于类，可以独立于元素来选择 ID。有些情况下，您知道文档中会出现某个特定 ID 值，但是并不知道它会出现在哪个元素上，所以您想声明独立的 ID 选择器。例如，您可能知道在一个给定的文档中会有一个 ID 值为 mostImportant 的元素。您不知道这个最重要的东西是一个段落、一个短语、一个列表项还是一个小节标题。您只知道每个文档都会有这么一个最重要的内容，它可能在任何元素中，而且只能出现一个。</p>
-<h2 id="属性选择器"><a href="#属性选择器" class="headerlink" title="属性选择器"></a>属性选择器</h2><p>根据元素的属性及属性值来选择元素</p>
-<h3 id="简单属性选择"><a href="#简单属性选择" class="headerlink" title="简单属性选择"></a>简单属性选择</h3><p>如果希望选择有某个属性的元素，而不论属性值是什么，可以使用简单属性选择器。<br>如果您希望把包含标题（title）的所有元素变为红色，可以写作：</p>
-<p><code>[title] {color:red;}</code><br><code>a[href][title] {color:red;}</code></p>
-<h3 id="根据具体属性值选择"><a href="#根据具体属性值选择" class="headerlink" title="根据具体属性值选择"></a>根据具体属性值选择</h3><p>可以把多个属性-值选择器链接在一起来选择一个文档。<br><code>a[href=&quot;http://www.w3school.com.cn/&quot;][title=&quot;W3School&quot;] {color: red;}</code></p>
-<h3 id="根据部分属性值选择"><a href="#根据部分属性值选择" class="headerlink" title="根据部分属性值选择"></a>根据部分属性值选择</h3><p>如果需要根据属性值中的词列表的某个词进行选择，则需要使用波浪号（~）。</p>
-<p>假设您想选择 class 属性中包含 important 的元素，可以用下面这个选择器做到这一点：</p>
-<p><code>p[class~=&quot;important&quot;] {color: red;}</code></p>
-<h3 id="子串匹配属性选择器"><a href="#子串匹配属性选择器" class="headerlink" title="子串匹配属性选择器"></a>子串匹配属性选择器</h3><p>类<br>[abc^=”def”]    选择 abc 属性值以 “def” 开头的所有元素<br>[abc$=”def”]    选择 abc 属性值以 “def” 结尾的所有元素<br>[abc*=”def”]    选择 abc 属性值中包含子串 “def” 的所有元素  </p>
-<h3 id="特定属性选择类型"><a href="#特定属性选择类型" class="headerlink" title="特定属性选择类型"></a>特定属性选择类型</h3><p><code>*[lang|=&quot;en&quot;] {color: red;}</code><br>上面这个规则会选择 lang 属性等于 en 或以 en- 开头的所有元素。因此，以下示例标记中的前三个元素将被选中，而不会选择后两个元素：</p>
-<h2 id="CSS-后代选择器"><a href="#CSS-后代选择器" class="headerlink" title="CSS 后代选择器"></a>CSS 后代选择器</h2><p>有关后代选择器有一个易被忽视的方面，即两个元素之间的层次间隔可以是无限的。</p>
-<p>例如，如果写作 ul em，这个语法就会选择从 ul 元素继承的<code>所有</code> em 元素，而不论 em 的嵌套层次多深。</p>
-<h2 id="CSS-子元素选择器"><a href="#CSS-子元素选择器" class="headerlink" title="CSS 子元素选择器"></a>CSS 子元素选择器</h2><p>与后代选择器相比，子元素选择器（Child selectors）只能选择作为某元素子元素的元素。<br>如果您不希望选择任意的后代元素，而是希望缩小范围，只选择某个元素的子元素，请使用子元素选择器（Child selector）。</p>
-<p>例如，如果您希望选择只作为 h1 元素子元素的 strong 元素，可以这样写：</p>
-<p><code>h1 &gt; strong {color:red;}</code></p>
-<p>这个规则会把第一个 h1 下面的两个 strong 元素变为红色，但是第二个 h1 中的 strong 不受影响：</p>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">h1</span>&gt;</span>This is <span class="tag">&lt;<span class="name">strong</span>&gt;</span>very<span class="tag">&lt;/<span class="name">strong</span>&gt;</span> <span class="tag">&lt;<span class="name">strong</span>&gt;</span>very<span class="tag">&lt;/<span class="name">strong</span>&gt;</span> important.<span class="tag">&lt;/<span class="name">h1</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">h1</span>&gt;</span>This is <span class="tag">&lt;<span class="name">em</span>&gt;</span>really <span class="tag">&lt;<span class="name">strong</span>&gt;</span>very<span class="tag">&lt;/<span class="name">strong</span>&gt;</span><span class="tag">&lt;/<span class="name">em</span>&gt;</span> important.<span class="tag">&lt;/<span class="name">h1</span>&gt;</span></span><br></pre></td></tr></table></figure>
-<p>如果从右向左读，选择器 h1 &gt; strong 可以解释为“选择作为 h1 元素子元素的所有 strong 元素”。</p>
-<h3 id="结合后代选择器和子选择器"><a href="#结合后代选择器和子选择器" class="headerlink" title="结合后代选择器和子选择器"></a>结合后代选择器和子选择器</h3><p>请看下面这个选择器：</p>
-<p><code>table.company td &gt; p</code><br>上面的选择器会选择作为 td 元素子元素的所有 p 元素，这个 td 元素本身从 table 元素继承，该 table 元素有一个包含 company 的 class 属性。</p>
-<h2 id="CSS-相邻兄弟选择器"><a href="#CSS-相邻兄弟选择器" class="headerlink" title="CSS 相邻兄弟选择器"></a>CSS 相邻兄弟选择器</h2><p>相邻兄弟选择器（Adjacent sibling selector）可选择紧接在另一元素后的元素，且二者有相同父元素。</p>
-<p>例如，如果要增加紧接在 h1 元素后出现的段落的上边距，可以这样写：</p>
-<p><code>h1 + p {margin-top:50px;}</code><br>这个选择器读作：“选择紧接在 h1 元素后出现的段落，h1 和 p 元素拥有共同的父元素”。</p>
-<p>用一个结合符只能选择两个相邻兄弟中的第二个元素</p>
-<h3 id="结合其他选择器"><a href="#结合其他选择器" class="headerlink" title="结合其他选择器"></a>结合其他选择器</h3><p>相邻兄弟结合符还可以结合其他结合符：</p>
-<p><code>html &gt; body table + ul {margin-top:20px;}</code><br>这个选择器解释为：选择紧接在 table 元素后出现的所有兄弟 ul 元素，该 table 元素包含在一个 body 元素中，body 元素本身是 html 元素的子元素。</p>
-<h2 id="CSS-伪类-Pseudo-classes"><a href="#CSS-伪类-Pseudo-classes" class="headerlink" title="CSS 伪类 (Pseudo-classes)"></a>CSS 伪类 (Pseudo-classes)</h2><p>:active    向被激活的元素添加样式。<br>:focus    向拥有键盘输入焦点的元素添加样式。<br>:hover    当鼠标悬浮在元素上方时，向元素添加样式。<br>:link    向未被访问的链接添加样式。<br>:visited    向已被访问的链接添加样式。<br>:first-child    向元素的第一个子元素添加样式。<br>:lang    向带有指定 lang 属性的元素添加样式。          </p>
-<p>提示：最常见的错误是认为 p:first-child 之类的选择器会选择 p 元素的第一个子元素。</p>
-<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">p</span><span class="selector-pseudo">:first-child</span> &#123;<span class="attribute">font-weight</span>: bold;&#125;</span><br><span class="line"><span class="selector-tag">li</span><span class="selector-pseudo">:first-child</span> &#123;<span class="attribute">text-transform</span>:uppercase;&#125;</span><br></pre></td></tr></table></figure>
-<p>第一个规则将作为某元素第一个子元素的所有<code>p 元素</code>设置为粗体。第二个规则将作为某个元素（在 HTML 中，这肯定是 ol 或 ul 元素）<code>第一个子元素的所有 li 元素变成大写</code>。<br>注释：必须声明 &lt;!DOCTYPE&gt;，这样 :first-child 才能在 IE 中生效。</p>
-<p>例子 1 - 匹配第一个<code>&lt;p&gt;</code>元素<br>在下面的例子中，选择器匹配作为任何元素的第一个子元素的 p 元素：</p>
-<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">p</span><span class="selector-pseudo">:first-child</span> &#123;</span><br><span class="line">  <span class="attribute">color</span>: red;</span><br><span class="line">  &#125;</span><br></pre></td></tr></table></figure>
-<p>例子 2 - 匹配所有 <code>&lt;p&gt;</code>元素中的第一个<code>&lt;i&gt;</code> 元素<br>在下面的例子中，选择器匹配所有 <code>&lt;p&gt;</code> 元素中的第一个 <code>&lt;i&gt;</code> 元素：</p>
-<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">p</span> &gt; <span class="selector-tag">i</span><span class="selector-pseudo">:first-child</span> &#123;</span><br><span class="line">  <span class="attribute">font-weight</span>:bold;</span><br><span class="line">  &#125;</span><br></pre></td></tr></table></figure>
-<p>例子 3 - 匹配所有作为第一个子元素的 <code>&lt;p&gt;</code> 元素中的所有<code>&lt;i&gt;</code> 元素<br>在下面的例子中，选择器匹配所有作为元素的第一个子元素的<code>&lt;p&gt;</code> 元素中的所有<code>&lt;i&gt;</code>元素：</p>
-<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">p</span><span class="selector-pseudo">:first-child</span> <span class="selector-tag">i</span> &#123;</span><br><span class="line">  <span class="attribute">color</span>:blue;</span><br><span class="line">  &#125;</span><br></pre></td></tr></table></figure>
-<h3 id="lang-伪类"><a href="#lang-伪类" class="headerlink" title=":lang 伪类"></a>:lang 伪类</h3><p>:lang 伪类使你有能力为不同的语言定义特殊的规则。在下面的例子中，:lang 类为属性值为 no 的 q 元素定义引号的类型：</p>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">html</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">style</span> <span class="attr">type</span>=<span class="string">"text/css"</span>&gt;</span></span><br><span class="line"><span class="css"><span class="selector-tag">q</span><span class="selector-pseudo">:lang(no)</span></span></span><br><span class="line">   &#123;</span><br><span class="line">   quotes: "~" "~"</span><br><span class="line">   &#125;</span><br><span class="line"><span class="tag">&lt;/<span class="name">style</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">p</span>&gt;</span>文字<span class="tag">&lt;<span class="name">q</span> <span class="attr">lang</span>=<span class="string">"no"</span>&gt;</span>段落中的引用的文字<span class="tag">&lt;/<span class="name">q</span>&gt;</span>文字<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure>
-<h2 id="CSS-伪元素-Pseudo-elements"><a href="#CSS-伪元素-Pseudo-elements" class="headerlink" title="CSS 伪元素 (Pseudo-elements)"></a>CSS 伪元素 (Pseudo-elements)</h2><p>CSS 伪元素用于向某些选择器设置特殊效果。</p>
-<p><code>:first-line 伪元素</code><br>“first-line” 伪元素用于向文本的首行设置特殊样式。<br>注释：”first-line” 伪元素只能用于块级元素。</p>
-<p><code>:first-letter 伪元素</code><br>“first-letter” 伪元素用于向文本的首字母设置特殊样式：<br>注释：”first-letter” 伪元素只能用于块级元素。</p>
-<p><code>CSS2 - :before 伪元素</code><br>“:before” 伪元素可以在元素的内容前面插入新内容。</p>
-<p>下面的例子在每个 <code>&lt;h1&gt;</code> 元素前面插入一幅图片：</p>
-<p>h1:before<br>  {<br>  content:url(logo.gif);<br>  }</p>
-<p><code>CSS2 - :after 伪元素</code><br>“:after” 伪元素可以在元素的内容之后插入新内容。</p>
-<p>下面的例子在每个 <code>&lt;h1&gt;</code> 元素后面插入一幅图片：</p>
-<p>h1:after<br>  {<br>  content:url(logo.gif);<br>  }</p>
-<h1 id="css对齐"><a href="#css对齐" class="headerlink" title="css对齐"></a>css对齐</h1><h2 id="对齐块元素"><a href="#对齐块元素" class="headerlink" title="对齐块元素"></a>对齐块元素</h2><p>块元素指的是占据全部可用宽度的元素，并且在其前后都会换行。</p>
-<p>1、使用 margin 属性来水平对齐<br>可通过将左和右外边距设置为 “auto”，来对齐块元素。</p>
-<p><code>注释</code>：除非已经声明了 !DOCTYPE，否则使用 margin:auto 在 IE8 以及更早的版本中是无效的。</p>
-<p>把左和右外边距设置为 auto，规定的是<code>均等地分配可用的外边距</code>。结果就是居中的元素<br>提示：如果宽度是 100%，则对齐没有效果。</p>
-<p>2、使用 position 属性进行左和右对齐<br>对齐元素的方法之一是使用绝对定位：</p>
-<p>3、使用 float 属性来进行左和右对齐<br>对齐元素的另一种方法是使用 float 属性：</p>
-<h1 id="CSS-分类属性-Classification"><a href="#CSS-分类属性-Classification" class="headerlink" title="CSS 分类属性 (Classification)"></a>CSS 分类属性 (Classification)</h1><p>clear    设置一个元素的侧面是否允许其他的浮动元素。<br>cursor    规定当指向某元素之上时显示的指针类型。<br>display    设置是否及如何显示元素。<br>float    定义元素在哪个方向浮动。<br>position    把元素放置到一个静态的、相对的、绝对的、或固定的位置中。<br>visibility    设置元素是否可见或不可见。  </p>
-<p><strong>display:block - 把链接显示为块元素可使整个链接区域可点击（不仅仅是文本），同时也允许我们规定宽度。</strong></p>
-<h1 id="CSS-图像透明度"><a href="#CSS-图像透明度" class="headerlink" title="CSS 图像透明度"></a>CSS 图像透明度</h1><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">img</span></span><br><span class="line">&#123;</span><br><span class="line"><span class="attribute">opacity</span>:<span class="number">0.4</span>;</span><br><span class="line"><span class="attribute">filter</span>:<span class="built_in">alpha</span>(opacity=<span class="number">40</span>); <span class="comment">/* 针对 IE8 以及更早的版本 */</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>IE9, Firefox, Chrome, Opera 和 Safari 使用属性 opacity 来设定透明度。opacity 属性能够设置的值从 0.0 到 1.0。<code>值越小，越透明</code>。<br>IE8 以及更早的版本使用滤镜 filter:alpha(opacity=x)。x 能够取的值从 0 到 100。值越小，越透明。</p>
-<h1 id="CSS2-媒介类型"><a href="#CSS2-媒介类型" class="headerlink" title="CSS2 媒介类型"></a>CSS2 媒介类型</h1><p>媒介类型(Media Types)允许你定义<code>以何种媒介</code>来提交文档。文档可以被显示在显示器、纸媒介或者听觉浏览器等等。</p>
-<h2 id="media规则"><a href="#media规则" class="headerlink" title="@media规则"></a>@media规则</h2><p>@media 规则使你有能力在相同的样式表中，使用不同的样式规则来针对不同的媒介。</p>
-<p>下面这个例子中的样式告知浏览器在显示器上显示 14 像素的 Verdana 字体。但是假如页面需要被打印，将使用 10 个像素的 Times 字体。注意：font-weight 被设置为粗体，不论显示器还是纸媒介：</p>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">html</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">style</span>&gt;</span></span><br><span class="line"><span class="css"><span class="keyword">@media</span> screen</span></span><br><span class="line">  &#123;</span><br><span class="line"><span class="css">  <span class="selector-tag">p</span><span class="selector-class">.test</span> &#123;<span class="attribute">font-family</span>:verdana,sans-serif; <span class="attribute">font-size</span>:<span class="number">14px</span>&#125;</span></span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line"><span class="css"><span class="keyword">@media</span> print</span></span><br><span class="line">  &#123;</span><br><span class="line"><span class="css">  <span class="selector-tag">p</span><span class="selector-class">.test</span> &#123;<span class="attribute">font-family</span>:times,serif; <span class="attribute">font-size</span>:<span class="number">10px</span>&#125;</span></span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line"><span class="css"><span class="keyword">@media</span> screen,print</span></span><br><span class="line">  &#123;</span><br><span class="line"><span class="css">  <span class="selector-tag">p</span><span class="selector-class">.test</span> &#123;<span class="attribute">font-weight</span>:bold&#125;</span></span><br><span class="line">  &#125;</span><br><span class="line"><span class="tag">&lt;/<span class="name">style</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span>....<span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure>
-<h2 id="不同的媒介类型"><a href="#不同的媒介类型" class="headerlink" title="不同的媒介类型"></a>不同的媒介类型</h2><p>注释：媒介类型名称对大小写不敏感。  </p>
-<p>all    用于所有的媒介设备。<br>aural    用于语音和音频合成器。<br>braille    用于盲人用点字法触觉回馈设备。<br>embossed    用于分页的盲人用点字法打印机。<br>handheld    用于小的手持的设备。<br>print    用于打印机。<br>projection    用于方案展示，比如幻灯片。<br>screen    用于电脑显示器。<br>tty    用于使用固定密度字母栅格的媒介，比如电传打字机和终端。<br>tv    用于电视机类型的设备。  </p>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2020/05/26/css/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-HTML5" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/05/26/HTML5/">w3C</a>
-    </h1>
-  
-
-        
-        <a href="/2020/05/26/HTML5/" class="archive-article-date">
-  	<time datetime="2020-05-26T06:32:07.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-05-26</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h1 id="HTML5-from-w3c"><a href="#HTML5-from-w3c" class="headerlink" title="HTML5(from w3c)"></a>HTML5(from w3c)</h1>
-        
-          <a class="article-more-a" href="/2020/05/26/HTML5/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2020/05/26/HTML5/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-html" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/05/25/html/">w3C</a>
-    </h1>
-  
-
-        
-        <a href="/2020/05/25/html/" class="archive-article-date">
-  	<time datetime="2020-05-25T11:43:07.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-05-25</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h1 id="HTML-from-w3c"><a href="#HTML-from-w3c" class="headerlink" title="HTML(from w3c)"></a>HTML(from w3c)</h1>
-        
-          <a class="article-more-a" href="/2020/05/25/html/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2020/05/25/html/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-leetCode-1" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/05/21/leetCode-1/">leetCode</a>
-    </h1>
-  
-
-        
-        <a href="/2020/05/21/leetCode-1/" class="archive-article-date">
-  	<time datetime="2020-05-21T07:53:16.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-05-21</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h1 id="每日一题"><a href="#每日一题" class="headerlink" title="每日一题"></a>每日一题</h1>
-        
-          <a class="article-more-a" href="/2020/05/21/leetCode-1/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2020/05/21/leetCode-1/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-二叉树" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/05/20/%E4%BA%8C%E5%8F%89%E6%A0%91/">数据结构</a>
-    </h1>
-  
-
-        
-        <a href="/2020/05/20/%E4%BA%8C%E5%8F%89%E6%A0%91/" class="archive-article-date">
-  	<time datetime="2020-05-20T08:50:07.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-05-20</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h1 id="二叉树和二叉查找树"><a href="#二叉树和二叉查找树" class="headerlink" title="二叉树和二叉查找树"></a>二叉树和二叉查找树</h1>
-        
-          <a class="article-more-a" href="/2020/05/20/%E4%BA%8C%E5%8F%89%E6%A0%91/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2020/05/20/%E4%BA%8C%E5%8F%89%E6%A0%91/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-链表" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/05/20/%E9%93%BE%E8%A1%A8/">数据结构</a>
-    </h1>
-  
-
-        
-        <a href="/2020/05/20/%E9%93%BE%E8%A1%A8/" class="archive-article-date">
-  	<time datetime="2020-05-20T05:51:29.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-05-20</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h1 id="链表"><a href="#链表" class="headerlink" title="链表"></a>链表</h1>
-        
-          <a class="article-more-a" href="/2020/05/20/%E9%93%BE%E8%A1%A8/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2020/05/20/%E9%93%BE%E8%A1%A8/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-队列" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/05/20/%E9%98%9F%E5%88%97/">数据结构</a>
-    </h1>
-  
-
-        
-        <a href="/2020/05/20/%E9%98%9F%E5%88%97/" class="archive-article-date">
-  	<time datetime="2020-05-20T03:46:45.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-05-20</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h1 id="队列"><a href="#队列" class="headerlink" title="队列"></a>队列</h1>
-        
-          <a class="article-more-a" href="/2020/05/20/%E9%98%9F%E5%88%97/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2020/05/20/%E9%98%9F%E5%88%97/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-栈" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/05/20/%E6%A0%88/">数据结构</a>
-    </h1>
-  
-
-        
-        <a href="/2020/05/20/%E6%A0%88/" class="archive-article-date">
-  	<time datetime="2020-05-20T01:49:08.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-05-20</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h1 id="栈"><a href="#栈" class="headerlink" title="栈"></a>栈</h1>
-        
-          <a class="article-more-a" href="/2020/05/20/%E6%A0%88/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2020/05/20/%E6%A0%88/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-列表" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/05/19/%E5%88%97%E8%A1%A8/">数据结构</a>
-    </h1>
-  
-
-        
-        <a href="/2020/05/19/%E5%88%97%E8%A1%A8/" class="archive-article-date">
-  	<time datetime="2020-05-19T11:39:56.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-05-19</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h1 id="列表"><a href="#列表" class="headerlink" title="列表"></a>列表</h1>
-        
-          <a class="article-more-a" href="/2020/05/19/%E5%88%97%E8%A1%A8/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2020/05/19/%E5%88%97%E8%A1%A8/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-构造函数" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/05/18/%E6%9E%84%E9%80%A0%E5%87%BD%E6%95%B0/">构造函数</a>
-    </h1>
-  
-
-        
-        <a href="/2020/05/18/%E6%9E%84%E9%80%A0%E5%87%BD%E6%95%B0/" class="archive-article-date">
+        <a href="/2020/05/18/%E6%95%B0%E7%BB%84/" class="archive-article-date">
   	<time datetime="2020-05-18T11:17:13.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-05-18</time>
 </a>
         
@@ -993,9 +192,9 @@ a:active - 链接被点击的时刻
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h1 id="构造函数和函数"><a href="#构造函数和函数" class="headerlink" title="构造函数和函数"></a>构造函数和函数</h1>
+        <h1 id="数组"><a href="#数组" class="headerlink" title="数组"></a>数组</h1>
         
-          <a class="article-more-a" href="/2020/05/18/%E6%9E%84%E9%80%A0%E5%87%BD%E6%95%B0/#more">more >></a>
+          <a class="article-more-a" href="/2020/05/18/%E6%95%B0%E7%BB%84/#more">more >></a>
         
       
 
@@ -1008,7 +207,72 @@ a:active - 链接被点击的时刻
 
       
         <p class="article-more-link">
-          <a class="article-more-a" href="/2020/05/18/%E6%9E%84%E9%80%A0%E5%87%BD%E6%95%B0/">展开全文 >></a>
+          <a class="article-more-a" href="/2020/05/18/%E6%95%B0%E7%BB%84/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-first-page" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/05/08/first-page/">first page</a>
+    </h1>
+  
+
+        
+        <a href="/2020/05/08/first-page/" class="archive-article-date">
+  	<time datetime="2020-05-08T11:17:13.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-05-08</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="数据结构-5-18"><a href="#数据结构-5-18" class="headerlink" title="数据结构 5/18"></a>数据结构 5/18</h1>
+        
+          <a class="article-more-a" href="/2020/05/08/first-page/#more">more >></a>
+        
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2020/05/08/first-page/">展开全文 >></a>
         </p>
       
 
@@ -1040,7 +304,7 @@ a:active - 链接被点击的时刻
   
   
     <nav id="page-nav">
-      <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="extend next" rel="next" href="/page/2/">Next &amp;raquo;</a>
+      <a class="extend prev" rel="prev" href="/">&amp;laquo; Prev</a><a class="page-number" href="/">1</a><span class="page-number current">2</span>
     </nav>
   
 
