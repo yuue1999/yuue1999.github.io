@@ -15,12 +15,12 @@
 <meta property="og:site_name" content="Hexo">
 <meta property="og:description" content="HTML(from w3c)">
 <meta property="og:locale" content="en_US">
-<meta property="og:image" content="http://yoursite.com/2020/05/25/html/img/6.png">
+<meta property="og:image" content="http://yoursite.com/.com//6.png">
 <meta property="article:published_time" content="2020-05-25T11:43:07.000Z">
 <meta property="article:modified_time" content="2020-05-26T08:15:19.912Z">
 <meta property="article:author" content="悦崽">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="http://yoursite.com/2020/05/25/html/img/6.png">
+<meta name="twitter:image" content="http://yoursite.com/.com//6.png">
   
     <link rel="alternative" href="/atom.xml" title="Hexo" type="application/atom+xml">
   
@@ -232,7 +232,7 @@
 <p>提示：假如浏览器找不到已定义的命名锚，那么就会定位到文档的顶端。不会有错误发生。</p>
 <p>a&gt; 标签的 target 属性规定在何处打开链接文档。</p>
 <p><code>target=&quot;view_window&quot; 在新窗口中打开</code></p>
-<p>在框架中打开窗口<br><code>target=&quot;view_frame&quot;</code><br>不用打开一个完整的浏览器窗口，使用 target 更通常的方法是在一个 <frameset> 显示中将超链接内容定向到一个或者多个框架中。可以将这个内容列表放入一个带有两个框架的文档的其中一个框架中，并用这个相邻的框架来显示选定的文档：</p>
+<p>在框架中打开窗口<br><code>target=&quot;view_frame&quot;</code><br>不用打开一个完整的浏览器窗口，使用 target 更通常的方法是在一个 <frameset> 显示中将超链接内容定向到一个或者多个框架中。可以将这个内容列表放入一个带有两个框架的文档的其中一个框架中，并用这个相邻的框架来显示选定的文档：</frameset></p>
 <figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">frameset</span> <span class="attr">cols</span>=<span class="string">"100,*"</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">frame</span> <span class="attr">src</span>=<span class="string">"toc.html"</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">frame</span> <span class="attr">src</span>=<span class="string">"pref.html"</span> <span class="attr">name</span>=<span class="string">"view_frame"</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">frameset</span>&gt;</span> </span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">h3</span>&gt;</span>Table of Contents<span class="tag">&lt;/<span class="name">h3</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">ul</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">li</span>&gt;</span><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">"pref.html"</span> <span class="attr">target</span>=<span class="string">"view_frame"</span>&gt;</span>Preface<span class="tag">&lt;/<span class="name">a</span>&gt;</span><span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">li</span>&gt;</span><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">"chap1.html"</span> <span class="attr">target</span>=<span class="string">"view_frame"</span>&gt;</span>Chapter 1<span class="tag">&lt;/<span class="name">a</span>&gt;</span><span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">li</span>&gt;</span><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">"chap2.html"</span> <span class="attr">target</span>=<span class="string">"view_frame"</span>&gt;</span>Chapter 2<span class="tag">&lt;/<span class="name">a</span>&gt;</span><span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">li</span>&gt;</span><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">"chap3.html"</span> <span class="attr">target</span>=<span class="string">"view_frame"</span>&gt;</span>Chapter 3<span class="tag">&lt;/<span class="name">a</span>&gt;</span><span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">ul</span>&gt;</span></span><br></pre></td></tr></table></figure>
 <h3 id="特殊的目标"><a href="#特殊的目标" class="headerlink" title="特殊的目标"></a>特殊的目标</h3><p>有 4 个保留的目标名称用作特殊的文档重定向操作：</p>
 <p><code>_blank</code><br>浏览器总在一个新打开、未命名的窗口中载入目标文档。</p>
@@ -264,7 +264,7 @@
 <p>colgroup&gt;    定义表格列的组。</p>
 <h1 id="HTML-列表"><a href="#HTML-列表" class="headerlink" title="HTML 列表"></a>HTML 列表</h1><p>ol ul 都可以设置type属性但是不建议使用<br>定义列表<br>自定义列表不仅仅是一列项目，而是项目及其注释的组合。</p>
 <p>自定义列表以 dl&gt; 标签开始。每个自定义列表项以 dt&gt; 开始。每个自定义列表项的<code>定义</code>以 dd&gt; 开始。</p>
-<h1 id="HTML-和"><a href="#HTML-和" class="headerlink" title="HTML  和 "></a>HTML <div> 和 <span></h1><p>大多数 HTML 元素被定义为块级元素或内联元素。</p>
+<h1 id="HTML-和"><a href="#HTML-和" class="headerlink" title="HTML  和 "></a>HTML <div> 和 <span></span></div></h1><p>大多数 HTML 元素被定义为块级元素或内联元素。</p>
 <p>编者注：“块级元素”译为 block level element，“内联元素”译为 inline element。</p>
 <p>块级元素在浏览器显示时，通常会以新行来开始（和结束）。</p>
 <p>例子：<code>&lt;h1&gt;, &lt;p&gt;, &lt;ul&gt;, &lt;table&gt;</code></p>
@@ -332,7 +332,7 @@
 <p>提示：使用实体名而不是数字的好处是，名称易于记忆。不过坏处是，浏览器也许并不支持所有实体名称（对实体数字的支持却很好）。</p>
 <p>不间断空格（non-breaking space）<br>HTML 中的常用字符实体是不间断空格(<code>&amp;nbsp;</code>)。</p>
 <p>浏览器总是会截短 HTML 页面中的空格。如果您在文本中写 10 个空格，在显示该页面之前，浏览器会删除它们中的 9 个。如需在页面中增加空格的数量，您需要使用 <code>&amp;nbsp</code>; 字符实体。</p>
-<p><img src="img/6.png" alt="avatar"></p>
+<p><img src="/.com//6.png" alt="avatar"></p>
 <h1 id="HTML-统一资源定位器"><a href="#HTML-统一资源定位器" class="headerlink" title="HTML 统一资源定位器"></a>HTML 统一资源定位器</h1><p>scheme - 定义因特网服务的类型。最常见的类型是 http</p>
 <p>host - 定义域主机（http 的默认主机是 www）</p>
 <p>domain - 定义因特网域名，比如 w3school.com.cn</p>
@@ -393,7 +393,7 @@
 <h1 id="HTML5-表单元素"><a href="#HTML5-表单元素" class="headerlink" title="HTML5 表单元素"></a>HTML5 表单元素</h1><p>HTML5 增加了如下表单元素：</p>
 <p>  <code>&lt;datalist&gt;</code><br><code>&lt;keygen&gt;</code><br><code>&lt;output&gt;</code></p>
 <p>注释：默认地，浏览器不会显示未知元素。新元素不会破坏您的页面。</p>
-<h2 id="HTML5-元素"><a href="#HTML5-元素" class="headerlink" title="HTML5  元素"></a>HTML5 <datalist> 元素</h2><p>datalist 元素为 input元素规定预定义选项列表。</p>
+<h2 id="HTML5-元素"><a href="#HTML5-元素" class="headerlink" title="HTML5  元素"></a>HTML5 <datalist> 元素</datalist></h2><p>datalist 元素为 input元素规定预定义选项列表。</p>
 <p>用户会在他们输入数据时看到预定义选项的下拉列表。</p>
 <p><code>&lt;input&gt;</code> 元素的 list 属性必须引用 <code>&lt;datalist&gt;</code> 元素的 id 属性。</p>
 <p>实例<br>通过 <code>&lt;datalist&gt;</code> 设置预定义值的 <code>&lt;input&gt;</code> 元素：</p>
@@ -454,7 +454,7 @@
 
 <p> ….还有很多属于Input的属性</p>
 <h1 id="HTML-多媒体"><a href="#HTML-多媒体" class="headerlink" title="HTML 多媒体"></a>HTML 多媒体</h1><h2 id="HTML-Object-元素"><a href="#HTML-Object-元素" class="headerlink" title="HTML Object 元素"></a>HTML Object 元素</h2><p>HTML 助手（插件）<br>辅助应用程序（helper application）是可由浏览器启动的程序。辅助应用程序也称为插件。</p>
-<p>辅助程序可用于播放音频和视频（以及其他）。辅助程序是使用 <object> 标签来加载的。</p>
+<p>辅助程序可用于播放音频和视频（以及其他）。辅助程序是使用 <object> 标签来加载的。</object></p>
 <p>使用辅助程序播放视频和音频的一个优势是，您能够允许用户来控制部分或全部播放设置。</p>
 <p>大多数辅助应用程序允许对音量设置和播放功能（比如后退、暂停、停止和播放）的手工（或程序的）控制。</p>
 <h2 id="HTML-音频"><a href="#HTML-音频" class="headerlink" title="HTML 音频"></a>HTML 音频</h2><h1 id="HTML-API"><a href="#HTML-API" class="headerlink" title="HTML API"></a>HTML API</h1>

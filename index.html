@@ -172,6 +172,362 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-test-1" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/06/04/test-1/">test</a>
+    </h1>
+  
+
+        
+        <a href="/2020/06/04/test-1/" class="archive-article-date">
+  	<time datetime="2020-06-04T06:10:29.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-06-04</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p><img src="/.com//aa.png" alt="aa"></p>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2020/06/04/test-1/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-leetcode-2" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/05/31/leetcode-2/">leetCode</a>
+    </h1>
+  
+
+        
+        <a href="/2020/05/31/leetcode-2/" class="archive-article-date">
+  	<time datetime="2020-05-31T01:47:51.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-05-31</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="每日一题-part-two"><a href="#每日一题-part-two" class="headerlink" title="每日一题(part-two)"></a>每日一题(part-two)</h1><h1 id="5-31-11"><a href="#5-31-11" class="headerlink" title="5/31-11"></a>5/31-11</h1><ol start="1266">
+<li>访问所有点的最小时间</li>
+</ol>
+<p>平面上有 n 个点，点的位置用整数坐标表示 points[i] = [xi, yi]。请你计算访问所有这些点需要的最小时间（以秒为单位）。</p>
+<p>你可以按照下面的规则在平面上移动：</p>
+<p>每一秒沿水平或者竖直方向移动一个单位长度，或者跨过对角线（可以看作在一秒内向水平和竖直方向各移动一个单位长度）。<br>必须按照数组中出现的顺序来访问这些点。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> minTimeToVisitAllPoints = <span class="function"><span class="keyword">function</span>(<span class="params">points</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">var</span> len = points.length;</span><br><span class="line">    <span class="keyword">var</span> result = <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">var</span> i = <span class="number">0</span>;i&lt;points.length<span class="number">-1</span>;i++)&#123;</span><br><span class="line">        result += <span class="built_in">Math</span>.max(<span class="built_in">Math</span>.abs(points[i][<span class="number">0</span>]-points[i+<span class="number">1</span>][<span class="number">0</span>]),<span class="built_in">Math</span>.abs(points[i][<span class="number">1</span>]-points[i+<span class="number">1</span>][<span class="number">1</span>]))</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> result</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+<h1 id="6-1-12"><a href="#6-1-12" class="headerlink" title="6/1-12"></a>6/1-12</h1><h2 id="66-加一"><a href="#66-加一" class="headerlink" title="66. 加一"></a>66. 加一</h2><p>给定一个由整数组成的非空数组所表示的非负整数，在该数的基础上加一。</p>
+<p>最高位数字存放在数组的首位， 数组中每个元素只存储单个数字。</p>
+<p>你可以假设除了整数 0 之外，这个整数不会以零开头。</p>
+<p>示例 1:</p>
+<pre>
+输入: [1,2,3]
+输出: [1,2,4]
+解释: 输入数组表示数字 123。
+</pre>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> plusOne = <span class="function"><span class="keyword">function</span>(<span class="params">digits</span>) </span>&#123;</span><br><span class="line">   <span class="keyword">var</span> numStr = digits.join(<span class="string">''</span>);</span><br><span class="line">   <span class="keyword">var</span> res = [];</span><br><span class="line">   <span class="keyword">var</span> r =<span class="number">0</span>;</span><br><span class="line">   <span class="keyword">for</span>(<span class="keyword">var</span> i = numStr.length<span class="number">-1</span>;i&gt;<span class="number">-1</span>;i--)&#123;</span><br><span class="line">       </span><br><span class="line">       <span class="keyword">if</span>(i==numStr.length<span class="number">-1</span>)&#123;</span><br><span class="line">           <span class="keyword">var</span> sum = r + <span class="built_in">parseInt</span>(numStr[i]) +<span class="number">1</span>;</span><br><span class="line">       &#125;<span class="keyword">else</span>&#123;</span><br><span class="line">           sum =  r+<span class="built_in">parseInt</span>(numStr[i]);</span><br><span class="line">       &#125; </span><br><span class="line">       <span class="keyword">if</span>(sum&gt;<span class="number">9</span>)&#123;</span><br><span class="line">           r=<span class="number">1</span>;</span><br><span class="line">       &#125;<span class="keyword">else</span>&#123;</span><br><span class="line">           r=<span class="number">0</span>;</span><br><span class="line">       &#125;</span><br><span class="line">       res[i]=sum%<span class="number">10</span>;</span><br><span class="line">   &#125;</span><br><span class="line">   <span class="keyword">if</span>(r == <span class="number">1</span>)&#123;</span><br><span class="line">       res.unshift(<span class="number">1</span>)</span><br><span class="line">   &#125;</span><br><span class="line">   <span class="keyword">return</span> res;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> plusOne = <span class="function"><span class="keyword">function</span>(<span class="params">digits</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">let</span> len = digits.length;</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">let</span> i = len<span class="number">-1</span>; i &gt;= <span class="number">0</span>; i--)&#123;</span><br><span class="line">        digits[i]++;</span><br><span class="line">        <span class="keyword">if</span>(digits[i]%<span class="number">10</span> !== <span class="number">0</span>) &#123;</span><br><span class="line">            <span class="keyword">return</span> digits</span><br><span class="line">        &#125;<span class="keyword">else</span>&#123;</span><br><span class="line">            digits[i]=<span class="number">0</span></span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">let</span> arr = <span class="keyword">new</span> <span class="built_in">Array</span>(len).fill(<span class="number">0</span>)</span><br><span class="line">    arr.unshift(<span class="number">1</span>)</span><br><span class="line">    <span class="keyword">return</span> arr</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+<h1 id="6-3-13"><a href="#6-3-13" class="headerlink" title="6/3-13"></a>6/3-13</h1><p>75.给定一个包含红色、白色和蓝色，一共 n 个元素的数组，原地对它们进行排序，使得相同颜色的元素相邻，并按照红色、白色、蓝色顺序排列。</p>
+<p>此题中，我们使用整数 0、 1 和 2 分别表示红色、白色和蓝色。</p>
+<p>注意:<br>不能使用代码库中的排序函数来解决这道题。</p>
+<p>示例:</p>
+<pre>
+
+输入: [2,0,2,1,1,0]
+输出: [0,0,1,1,2,2]
+</pre>
+
+<p>来源：力扣（LeetCode）<br>链接：<a href="https://leetcode-cn.com/problems/sort-colors" target="_blank" rel="noopener">https://leetcode-cn.com/problems/sort-colors</a></p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="comment">//操作数组：96ms</span></span><br><span class="line"><span class="keyword">var</span> sortColors = <span class="function"><span class="keyword">function</span>(<span class="params">nums</span>) </span>&#123;</span><br><span class="line">            <span class="keyword">var</span> count = <span class="number">0</span>;</span><br><span class="line">            <span class="keyword">var</span> i = <span class="number">0</span>;</span><br><span class="line">            <span class="keyword">while</span> (count &lt; nums.length) &#123;</span><br><span class="line">                <span class="keyword">if</span> (nums[i] == <span class="number">0</span>) &#123;</span><br><span class="line">                    nums.splice(i, <span class="number">1</span>);</span><br><span class="line">                    nums.unshift(<span class="number">0</span>);</span><br><span class="line">                    i++;</span><br><span class="line">                &#125; <span class="keyword">else</span> <span class="keyword">if</span> (nums[i] == <span class="number">2</span>) &#123;</span><br><span class="line">                    nums.splice(i, <span class="number">1</span>);</span><br><span class="line">                    nums.push(<span class="number">2</span>);</span><br><span class="line">                &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">                    i++;</span><br><span class="line">                &#125;</span><br><span class="line">                count++;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">return</span> nums;</span><br><span class="line">        &#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 冒泡排序 80ms</span></span><br><span class="line"> <span class="keyword">var</span> sortColors = <span class="function"><span class="keyword">function</span>(<span class="params">nums</span>) </span>&#123;</span><br><span class="line">     <span class="keyword">for</span>(<span class="keyword">let</span> i=<span class="number">0</span>;i&lt;nums.length;i++)&#123;</span><br><span class="line">         <span class="keyword">for</span>(j=<span class="number">0</span>;j&lt;nums.length-i;j++)&#123;</span><br><span class="line">             <span class="keyword">if</span>(nums[j]&gt;nums[j+<span class="number">1</span>])&#123;</span><br><span class="line">                 [nums[j],nums[j+<span class="number">1</span>]]=[nums[j+<span class="number">1</span>],nums[j]];</span><br><span class="line">             &#125;</span><br><span class="line">         &#125;</span><br><span class="line">     &#125;</span><br><span class="line">    <span class="keyword">return</span> nums</span><br><span class="line"> &#125;;</span><br></pre></td></tr></table></figure>
+<h1 id="6-3-14"><a href="#6-3-14" class="headerlink" title="6/3-14"></a>6/3-14</h1><p><code>1381. 设计一个支持增量操作的栈</code></p>
+<p>请你设计一个支持下述操作的栈。</p>
+<p>实现自定义栈类 CustomStack ：</p>
+<p>CustomStack(int maxSize)：用 maxSize 初始化对象，maxSize 是栈中最多能容纳的元素数量，栈在增长到 maxSize 之后则不支持 push 操作。</p>
+<p>void push(int x)：如果栈还未增长到 maxSize ，就将 x 添加到栈顶。    </p>
+<p>int pop()：弹出栈顶元素，并返回栈顶的值，或栈为空时返回 -1 。   </p>
+<p>void inc(int k, int val)：<br>栈底的 k 个元素的值都增加 val 。如果栈中元素总数小于 k ，则栈中的所有元素都增加 val 。</p>
+<pre>
+示例：
+
+输入：
+["CustomStack","push","push","pop","push","push","push","increment","increment","pop","pop","pop","pop"]
+[[3],[1],[2],[],[2],[3],[4],[5,100],[2,100],[],[],[],[]]
+输出：
+[null,null,null,2,null,null,null,null,null,103,202,201,-1]
+解释：
+CustomStack customStack = new CustomStack(3); // 栈是空的 []
+customStack.push(1);                          // 栈变为 [1]
+customStack.push(2);                          // 栈变为 [1, 2]
+customStack.pop();                            // 返回 2 --> 返回栈顶值 2，栈变为 [1]
+customStack.push(2);                          // 栈变为 [1, 2]
+customStack.push(3);                          // 栈变为 [1, 2, 3]
+customStack.push(4);                          // 栈仍然是 [1, 2, 3]，不能添加其他元素使栈大小变为 4
+customStack.increment(5, 100);                // 栈变为 [101, 102, 103]
+customStack.increment(2, 100);                // 栈变为 [201, 202, 103]
+customStack.pop();                            // 返回 103 --> 返回栈顶值 103，栈变为 [201, 202]
+customStack.pop();                            // 返回 202 --> 返回栈顶值 202，栈变为 [201]
+customStack.pop();                            // 返回 201 --> 返回栈顶值 201，栈变为 []
+customStack.pop();                            // 返回 -1 --> 栈为空，返回 -1
+</pre>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@param <span class="type">&#123;number&#125;</span> <span class="variable">maxSize</span></span></span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">var</span> CustomStack = <span class="function"><span class="keyword">function</span>(<span class="params">maxSize</span>) </span>&#123;</span><br><span class="line">    arr=[];</span><br><span class="line">    top=<span class="number">0</span>;</span><br><span class="line">    m=maxSize;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="comment">/** </span></span><br><span class="line"><span class="comment"> * <span class="doctag">@param <span class="type">&#123;number&#125;</span> <span class="variable">x</span></span></span></span><br><span class="line"><span class="comment"> * <span class="doctag">@return <span class="type">&#123;void&#125;</span></span></span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line">CustomStack.prototype.push = <span class="function"><span class="keyword">function</span>(<span class="params">x</span>) </span>&#123;</span><br><span class="line">      <span class="keyword">if</span>(top!==m)&#123;</span><br><span class="line">          arr[top++]=x;</span><br><span class="line">      &#125;</span><br><span class="line">      <span class="keyword">return</span> arr;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@return <span class="type">&#123;number&#125;</span></span></span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line">CustomStack.prototype.pop = <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="keyword">if</span>(top)&#123; <span class="keyword">return</span> arr[--top];&#125;</span><br><span class="line">    <span class="keyword">else</span>&#123;<span class="keyword">return</span> <span class="number">-1</span>&#125;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="comment">/** </span></span><br><span class="line"><span class="comment"> * <span class="doctag">@param <span class="type">&#123;number&#125;</span> </span>k </span></span><br><span class="line"><span class="comment"> * <span class="doctag">@param <span class="type">&#123;number&#125;</span> <span class="variable">val</span></span></span></span><br><span class="line"><span class="comment"> * <span class="doctag">@return <span class="type">&#123;void&#125;</span></span></span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line">CustomStack.prototype.increment = <span class="function"><span class="keyword">function</span>(<span class="params">k, val</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">while</span>(k)&#123;</span><br><span class="line">        arr[k<span class="number">-1</span>] += val;</span><br><span class="line">        k--;</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+<p>执行了180ms我真是个小天才</p>
+<h1 id="6-4-15"><a href="#6-4-15" class="headerlink" title="6/4-15"></a>6/4-15</h1><h2 id="394-字符串解码"><a href="#394-字符串解码" class="headerlink" title="394. 字符串解码"></a>394. 字符串解码</h2><p>给定一个经过编码的字符串，返回它解码后的字符串。</p>
+<p>编码规则为: <code>k[encoded_string]</code>，表示其中方括号内部的 encoded_string 正好重复 k 次。注意 k 保证为正整数。</p>
+<p>你可以认为输入字符串总是有效的；输入字符串中没有额外的空格，且输入的方括号总是符合格式要求的。</p>
+<p>此外，你可以认为原始数据不包含数字，所有的数字只表示重复的次数 k ，例如不会出现像 3a 或 2[4] 的输入。</p>
+<p>示例:</p>
+<pre>
+s = "3[a]2[bc]", 返回 "aaabcbc".
+s = "3[a2[c]]", 返回 "accaccacc".
+s = "2[abc]3[cd]ef", 返回 "abcabccdcdcdef".
+</pre>
+<p>从内往外层层解决 [] ，需要保持对字符串的记忆<br>stack 可以实现，记录记忆</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> decodeString = <span class="function">(<span class="params">s</span>) =&gt;</span> &#123;</span><br><span class="line">  <span class="keyword">let</span> numStack = [] <span class="comment">// 倍数num的等待栈</span></span><br><span class="line">  <span class="keyword">let</span> strStack = [] <span class="comment">// 待拼接的str的等待栈</span></span><br><span class="line">  <span class="keyword">let</span> num = <span class="number">0</span>       <span class="comment">// 倍数的“搬运工”</span></span><br><span class="line">  <span class="keyword">let</span> result = <span class="string">''</span>   <span class="comment">// 字符串的“搬运工”</span></span><br><span class="line">  <span class="keyword">for</span> (<span class="keyword">const</span> char <span class="keyword">of</span> s) &#123;      <span class="comment">// 向右逐字符扫描</span></span><br><span class="line">    <span class="keyword">if</span> (!<span class="built_in">isNaN</span>(char)) &#123;        <span class="comment">// 遇到数字</span></span><br><span class="line">      num = num * <span class="number">10</span> + +char   <span class="comment">// js中+可以将数字字符转为数字</span></span><br><span class="line">    &#125; <span class="keyword">else</span> <span class="keyword">if</span> (char === <span class="string">'['</span>) &#123; <span class="comment">// 入栈的时机</span></span><br><span class="line">      strStack.push(result)    <span class="comment">// result进入strStack栈等待</span></span><br><span class="line">      result = <span class="string">''</span>              <span class="comment">// 完成进栈后 清零</span></span><br><span class="line">      numStack.push(num)       <span class="comment">// 倍数num进入栈等待</span></span><br><span class="line">      num = <span class="number">0</span>                  <span class="comment">// 完成进栈后 清零</span></span><br><span class="line">    &#125; <span class="keyword">else</span> <span class="keyword">if</span> (char === <span class="string">']'</span>) &#123; <span class="comment">// 出栈的时机，两个栈的栈顶出栈</span></span><br><span class="line">      <span class="keyword">let</span> repeatTimes = numStack.pop() <span class="comment">// 获取拷贝次数</span></span><br><span class="line">      result = strStack.pop() + result.repeat(repeatTimes) <span class="comment">// 构建子串</span></span><br><span class="line">    &#125; <span class="keyword">else</span> &#123;                   <span class="comment">// 遇到字母，追加给result串</span></span><br><span class="line">      result += char</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">return</span> result </span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">作者：hyj8</span><br><span class="line">链接：https:<span class="comment">//leetcode-cn.com/problems/decode-string/solution/zhan-de-ji-yi-nei-ceng-de-jie-ma-liao-bie-wang-lia/</span></span><br></pre></td></tr></table></figure>
+<p>方法2 从后往前考虑</p>
+<p><strong>大致思路</strong><br>直接让  ]      之前的所有字符逐个入栈 stack<br>然后一个个出栈考察，顺序就是先构建内层<br>首先遇到的肯定是[]中的字母，一个个拼成子串，直到遇到 [ 停下来<br>接着遇到数字，数字出栈，组成倍数，直到遇到 “非数字”<br>现在有了字母串和倍数，就构建出局部子串，一整个子串推入栈<br>这样，一个 [] 中的子串就构建好了放在 stack 里<br>它再和可能有的别的字母一起组成子串，再一起被倍数拷贝<br>再回到 stack 里，最后将 stack 里的项剩下都是字符串，<br>     join 拼接成字符串返回  </p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> decodeString = <span class="function">(<span class="params">s</span>) =&gt;</span> &#123;</span><br><span class="line">  <span class="keyword">let</span> stack = []</span><br><span class="line">  <span class="keyword">for</span> (<span class="keyword">const</span> char <span class="keyword">of</span> s) &#123;</span><br><span class="line">    <span class="keyword">if</span> (char !== <span class="string">']'</span>) &#123; <span class="comment">// ] 前的字符都入栈</span></span><br><span class="line">      stack.push(char)</span><br><span class="line">      <span class="keyword">continue</span></span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">let</span> cur = stack.pop() <span class="comment">// 弹出一个来检测</span></span><br><span class="line">    <span class="keyword">let</span> str = <span class="string">''</span> <span class="comment">// 组装字符串</span></span><br><span class="line">    <span class="comment">// 接下来肯定是遇到字母，直到遇到 [</span></span><br><span class="line">    <span class="keyword">while</span> (cur !== <span class="string">'['</span>) &#123;</span><br><span class="line">      str = cur + str <span class="comment">// cur字符加在左边</span></span><br><span class="line">      cur = stack.pop() <span class="comment">// 再拉出一个</span></span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">// 此时cur为 [，接下来要遇到数字</span></span><br><span class="line">    <span class="keyword">let</span> num = <span class="string">''</span></span><br><span class="line">    cur = stack.pop() <span class="comment">// 用下一个将 [ 覆盖</span></span><br><span class="line">    <span class="keyword">while</span> (!<span class="built_in">isNaN</span>(cur)) &#123;</span><br><span class="line">      num = cur + num <span class="comment">// 数字字符加在左边</span></span><br><span class="line">      cur = stack.pop() <span class="comment">// 再拉出一个</span></span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">// 现在要么是字母，要么是 [</span></span><br><span class="line">    stack.push(cur)</span><br><span class="line">    stack.push(str.repeat(num))</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">return</span> stack.join(<span class="string">''</span>)</span><br><span class="line">&#125;</span><br><span class="line">作者：hyj8</span><br><span class="line">链接：https:<span class="comment">//leetcode-cn.com/problems/decode-string/solution/zhan-de-ji-yi-nei-ceng-de-jie-ma-liao-bie-wang-lia/</span></span><br></pre></td></tr></table></figure>
+<p><strong>mycode</strong></p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> decodeString = <span class="function"><span class="keyword">function</span>(<span class="params">s</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">var</span> numStack = [];</span><br><span class="line">    <span class="keyword">var</span> strStack = [];</span><br><span class="line">    <span class="keyword">var</span> num = <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">var</span> str = <span class="string">''</span>;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">var</span> i = <span class="number">0</span>; i &lt; s.length; i++) &#123;</span><br><span class="line">        <span class="keyword">if</span> (!<span class="built_in">isNaN</span>(s[i])) &#123;</span><br><span class="line">            num = num * <span class="number">10</span> + +s[i];</span><br><span class="line">        &#125; <span class="keyword">else</span> <span class="keyword">if</span> (s[i] === <span class="string">'['</span>) &#123;</span><br><span class="line">            numStack.push(num);</span><br><span class="line">            num = <span class="number">0</span>;</span><br><span class="line">            strStack.push(str);</span><br><span class="line">            str = <span class="string">''</span></span><br><span class="line">        &#125; <span class="keyword">else</span> <span class="keyword">if</span> (s[i] === <span class="string">']'</span>) &#123;</span><br><span class="line">            str = strStack.pop() + str.repeat(numStack.pop())</span><br><span class="line">        &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">            str += s[i];</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> str</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2020/05/31/leetcode-2/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-面试题" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/05/30/%E9%9D%A2%E8%AF%95%E9%A2%98/">面筋</a>
+    </h1>
+  
+
+        
+        <a href="/2020/05/30/%E9%9D%A2%E8%AF%95%E9%A2%98/" class="archive-article-date">
+  	<time datetime="2020-05-30T12:26:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-05-30</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="面试题整理（5-30"><a href="#面试题整理（5-30" class="headerlink" title="面试题整理（5/30"></a>面试题整理（5/30</h1><h1 id="css基础"><a href="#css基础" class="headerlink" title="css基础"></a>css基础</h1><h2 id="三栏布局问题"><a href="#三栏布局问题" class="headerlink" title="三栏布局问题"></a>三栏布局问题</h2><p>（左右固定宽度 中间自适应）</p>
+<p>1.float + margin（浮动布局）</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"container"</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"left"</span>&gt;</span>left<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">      <span class="comment">&lt;!-- 右栏部分要写在中间内容之前  为什么--&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"right"</span>&gt;</span>right<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"main"</span>&gt;</span>main<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"></span><br><span class="line">  <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line">* &#123;</span><br><span class="line">       <span class="attribute">margin</span>: <span class="number">0</span>;</span><br><span class="line">       <span class="attribute">padding</span>: <span class="number">0</span>;</span><br><span class="line">       <span class="attribute">height</span>: <span class="number">100%</span>;</span><br><span class="line">   &#125;</span><br><span class="line">   </span><br><span class="line">   <span class="selector-class">.left</span> &#123;</span><br><span class="line">       <span class="attribute">background-color</span>: bisque;</span><br><span class="line">       <span class="attribute">height</span>: <span class="number">100%</span>;</span><br><span class="line">       <span class="attribute">width</span>: <span class="number">30%</span>;</span><br><span class="line">       <span class="attribute">float</span>: left;</span><br><span class="line">   &#125;</span><br><span class="line">   </span><br><span class="line">   <span class="selector-class">.right</span> &#123;</span><br><span class="line">       <span class="attribute">background-color</span>: blueviolet;</span><br><span class="line">       <span class="attribute">height</span>: <span class="number">100%</span>;</span><br><span class="line">       <span class="attribute">float</span>: right;</span><br><span class="line">       <span class="attribute">width</span>: <span class="number">30%</span>;</span><br><span class="line">   &#125;</span><br><span class="line">   </span><br><span class="line">   <span class="selector-class">.main</span> &#123;</span><br><span class="line">       <span class="attribute">background-color</span>: cornflowerblue;</span><br><span class="line">       <span class="attribute">height</span>: <span class="number">100%</span>;</span><br><span class="line">   &#125;</span><br></pre></td></tr></table></figure>
+
+<p>2.position（绝对布局）</p>
+<p>左右和中间都用绝对定位<br>或者中间用margin空出中间元素所占的空间</p>
+<p>3.flex（弹性盒子布局）<br>移动端首选<br>缺点: 不兼容 ie9 及以下</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.main</span>&#123;</span><br><span class="line">    <span class="attribute">flex</span>: <span class="number">1</span>;</span><br><span class="line">    <span class="attribute">background</span>: blue;</span><br><span class="line">    //让所有弹性盒模型对象的子元素都有相同的长度，且忽略它们内部的内容：</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>4.table(表格布局)</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.container</span>&#123;</span><br><span class="line">    <span class="attribute">display</span>: table;</span><br><span class="line">    <span class="attribute">width</span>:<span class="number">100%</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.container</span>&gt;<span class="selector-tag">div</span>&#123;</span><br><span class="line">    <span class="attribute">display</span>: table-cell;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>优点：兼容性很好（ie8 及以上） 父元素高度会被子元素撑开（不担心高度塌陷）<br>缺点: seo 不友好 当其中一个单元格高度超出的时候，其他的单元格也是会跟着一起变高的</p>
+<p>5.Grid(网格布局)    </p>
+<p>优点：简单强大 解决二维布局问题<br>缺点: 不兼容 ie9 及以下<br>Flex 布局是轴线布局，只能指定”项目”针对轴线的位置，可以看作是一维布局。Grid 布局则是将容器划分成”行”和”列”，产生单元格，然后指定”项目所在”的单元格，可以看作是二维布局。Grid 布局远比 Flex 布局强大。</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.container</span> &#123;</span><br><span class="line">           <span class="attribute">display</span>: grid;</span><br><span class="line">           <span class="attribute">width</span>: <span class="number">100%</span>;</span><br><span class="line">           <span class="attribute">grid-template-rows</span>: <span class="number">100px</span>;</span><br><span class="line">           <span class="attribute">grid-template-columns</span>: <span class="number">200px</span> auto <span class="number">200px</span>;</span><br><span class="line">       &#125;</span><br></pre></td></tr></table></figure>
+
+<h1 id="BFC"><a href="#BFC" class="headerlink" title="BFC"></a>BFC</h1><p>BFC（Block Formatting Context）块级格式化上下文，是 Web 页面中盒模型布局的 CSS 渲染模式，指一个独立的渲染区域或者说是一个隔离的独立容器。</p>
+<p><code>BFC 形成条件：</code><br>1、浮动元素，float 除 none 以外的值；<br>2、定位元素，position（absolute，fixed）；<br>3、display 为以下其中之一的值 inline-block，    table-cell，table-caption；<br>4、overflow 除了 visible 以外的值（hidden，auto，scroll）；<br><code>BFC 特性：</code><br>1.内部的 Box 会在垂直方向上一个接一个的放置；<br>2.垂直方向上的距离由margin 决定；（解决外边距重叠问题）<br>3.bfc 的区域不会与 float 的元素区域重叠；（防止浮动文字环绕）<br>4.计算 bfc 的高度时，浮动元素也参与计算；（清除浮动）<br>5.bfc 就是页面上的一个独立容器，容器里面的子元素不会影响外面元素</p>
+<h1 id="DOM事件"><a href="#DOM事件" class="headerlink" title="DOM事件"></a>DOM事件</h1><h2 id="事件级别"><a href="#事件级别" class="headerlink" title="事件级别"></a>事件级别</h2><p><strong>DOM 0级</strong>：写法：<code>el.οnclick=function(){}</code><br>当希望为同一个元素/标签绑定多个同类型事件的时候（如给上面的这个btn元素绑定3个点击事件），是不被允许的。DOM0事件绑定，给元素的事件行为绑定方法，这些方法都是在当前元素事件行为的冒泡阶段(或者目标阶段)执行的。</p>
+<p>由于<strong>DOM 1级</strong>中没有事件的相关内容，所以没有DOM 1级事件    </p>
+<p><strong>DOM 2级</strong>写法：<code>el.addEventListener(event-name, callback, useCapture)</code><br>event-name: 事件名称，可以是标准的DOM事件<br>callback: 回调函数，当事件触发时，函数会被注入一个参数为当前的事件对象event<br>useCapture: 默认是false，代表事件句柄在冒泡阶段执行</p>
+<p><strong>DOM 3级</strong>写法和DOM2级一致<code>el.addEventListener(event-name, callback, useCapture)</code>    只是在DOM 2级事件的基础上添加了<code>更多的事件类型</code></p>
+<p>UI事件，当用户与页面上的元素交互时触发，如：load、scroll<br>焦点事件，当元素获得或失去焦点时触发，如：blur、focus<br>鼠标事件，当用户通过鼠标在页面执行操作时触发如：dblclick、mouseup<br>滚轮事件，当使用鼠标滚轮或类似设备时触发，如：mousewheel<br>文本事件，当在文档中输入文本时触发，如：textInput<br>键盘事件，当用户通过键盘在页面上执行操作时触发，如：keydown、keypress<br>合成事件，当为IME（输入法编辑器）输入字符时触发，如：compositionstart<br>变动事件，当底层DOM结构发生变化时触发，如：DOMsubtreeModified<br>同时DOM3级事件也允许使用者自定义一些事件。</p>
+<h2 id="DOM事件模型-事件流"><a href="#DOM事件模型-事件流" class="headerlink" title="DOM事件模型 事件流"></a>DOM事件模型 事件流</h2><p>事件模型分为：捕获和冒泡<br>事件流：<br>（1）捕获阶段：事件从window对象自上而下向目标节点传播的阶段；<br>（2）目标阶段：真正的目标节点正在处理事件的阶段；<br>（3）冒泡阶段：事件从目标节点自下而上向window对象传播的阶段。<br>window-&gt; document-&gt;html&gt;body-&gt;…-&gt;目标元素</p>
+<h2 id="事件委托（代理）"><a href="#事件委托（代理）" class="headerlink" title="事件委托（代理）"></a>事件委托（代理）</h2><p>由于事件会在冒泡阶段向上传播到父节点，因此可以把子节点的监听函数定义在父节点上，由父节点的监听函数统一处理多个子元素的事件。这种方法叫做事件的代理（delegation）<br>优点：<br>1.减少内存消耗，提高性能(不需要为每一个子元素绑定事件)<br>2.动态绑定事件</p>
+<h3 id="Event对象使用"><a href="#Event对象使用" class="headerlink" title="Event对象使用"></a>Event对象使用</h3><p>1.阻止默认行为：<br><code>event. preventDefault()</code><br>什么是默认事件呢？例如表单一点击提交按钮(submit)跳转页面、a标签默认页面跳转或是锚点定位等<br>2.阻止冒泡：<br><code>event.stopPropagation()</code><br>方法阻止事件冒泡到父元素，阻止任何父事件处理程序被执行<br>stopImmediatePropagation 既能阻止事件向父元素冒泡，也能阻止元素同事件类型的其它监听器被触发<br>3.<code>event.target &amp; event.currentTarget</code><br>event.currentTarget始终是监听事件者，而event.target是事件的真正发出者</p>
+<h2 id="自定义事件"><a href="#自定义事件" class="headerlink" title="自定义事件"></a>自定义事件</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> myEvent = <span class="keyword">new</span> CustomEvent(<span class="string">'build'</span>, &#123;</span><br><span class="line">                detail: &#123;</span><br><span class="line">                    a: <span class="number">1</span></span><br><span class="line">                &#125;</span><br><span class="line">            &#125;) <span class="comment">//创建事件对象</span></span><br><span class="line">            <span class="comment">// document.dispatchEvent(myEvent) //分派事件</span></span><br><span class="line"> <span class="built_in">window</span>.addEventListener(<span class="string">'build'</span>, e =&gt; &#123;</span><br><span class="line">            <span class="built_in">console</span>.log(e);</span><br><span class="line"></span><br><span class="line">        &#125;)</span><br><span class="line"><span class="keyword">if</span> (<span class="built_in">window</span>.dispatchEvent) &#123;</span><br><span class="line">    <span class="built_in">window</span>.dispatchEvent(myEvent);</span><br><span class="line">    &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">    <span class="built_in">window</span>.fireEvent(myEvent);</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
+<h2 id="手写EventEmitter-发布订阅模式–简单版"><a href="#手写EventEmitter-发布订阅模式–简单版" class="headerlink" title="手写EventEmitter(发布订阅模式–简单版)"></a>手写EventEmitter(发布订阅模式–简单版)</h2><p>发布—订阅模式又叫观察者模式，它定义了对象间的一种一对多的关系，让多个观察者对象同时监听某一个主题对象，当一个对象发生改变时，所有依赖于它的对象都将得到通知。</p>
+<p>在发布/订阅模式中，你可以想象存在一个消息中心的地方，你可以在那里“注册一条消息”，那么被注册的这条消息可以被感兴趣的若干人“订阅”，一旦未来这条“消息被发布”，则所有订阅了这条消息的人都会得到提醒。</p>
+<p><code>vue 和 react 的非父子组件的通信就是靠他实现的</code></p>
+<p>发布订阅模式的缺点：<br>1.创建订阅者需要消耗一定的时间和内存。<br>2.虽然可以弱化对象之间的联系，如果过度使用的话，反而使代码不好理解及代码不好维护等等。      </p>
+<p>ES6提供了更接近传统语言的写法，引入了Class（类）这个概念，作为对象的模板。通过class关键字，可以定义类。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">EventEmitter</span> </span>&#123;</span><br><span class="line">        <span class="keyword">constructor</span>() &#123;</span><br><span class="line">          <span class="keyword">this</span>.events = &#123;&#125;;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="comment">// 实现订阅</span></span><br><span class="line">        on(type, callBack) &#123;</span><br><span class="line">          <span class="keyword">if</span> (!<span class="keyword">this</span>.events) <span class="keyword">this</span>.events = <span class="built_in">Object</span>.create(<span class="literal">null</span>);</span><br><span class="line"></span><br><span class="line">          <span class="keyword">if</span> (!<span class="keyword">this</span>.events[type]) &#123;</span><br><span class="line">            <span class="keyword">this</span>.events[type] = [callBack];</span><br><span class="line">          &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">            <span class="keyword">this</span>.events[type].push(callBack);</span><br><span class="line">          &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="comment">// 删除订阅</span></span><br><span class="line">        off(type, callBack) &#123;</span><br><span class="line">          <span class="keyword">if</span> (!<span class="keyword">this</span>.events[type]) <span class="keyword">return</span>;</span><br><span class="line">          <span class="keyword">this</span>.events[type] = <span class="keyword">this</span>.events[type].filter(<span class="function"><span class="params">item</span> =&gt;</span> &#123;</span><br><span class="line">            <span class="keyword">return</span> item !== callBack;</span><br><span class="line">          &#125;);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="comment">// 只执行一次订阅事件</span></span><br><span class="line">        once(type, callBack) &#123;</span><br><span class="line">          <span class="function"><span class="keyword">function</span> <span class="title">fn</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">            callBack();</span><br><span class="line">            <span class="keyword">this</span>.off(type, fn);</span><br><span class="line">          &#125;</span><br><span class="line">          <span class="keyword">this</span>.on(type, fn);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="comment">// 触发事件</span></span><br><span class="line">        emit(type, ...rest) &#123;</span><br><span class="line">          <span class="keyword">this</span>.events[type] &amp;&amp;</span><br><span class="line">            <span class="keyword">this</span>.events[type].forEach(<span class="function"><span class="params">fn</span> =&gt;</span> fn.apply(<span class="keyword">this</span>, rest));</span><br><span class="line">        &#125;</span><br><span class="line">      &#125;</span><br><span class="line"><span class="comment">// 使用如下</span></span><br><span class="line">      <span class="keyword">const</span> event = <span class="keyword">new</span> EventEmitter();</span><br><span class="line"></span><br><span class="line">      <span class="keyword">const</span> handle = <span class="function">(<span class="params">...rest</span>) =&gt;</span> &#123;</span><br><span class="line">        <span class="built_in">console</span>.log(rest);</span><br><span class="line">      &#125;;</span><br><span class="line"></span><br><span class="line">      event.on(<span class="string">"click"</span>, handle);</span><br><span class="line"></span><br><span class="line">      event.emit(<span class="string">"click"</span>, <span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>);</span><br><span class="line"></span><br><span class="line">      event.off(<span class="string">"click"</span>, handle);</span><br><span class="line"></span><br><span class="line">      event.emit(<span class="string">"click"</span>, <span class="number">1</span>, <span class="number">2</span>);</span><br><span class="line"></span><br><span class="line">      event.once(<span class="string">"dbClick"</span>, () =&gt; &#123;</span><br><span class="line">        <span class="built_in">console</span>.log(<span class="number">123456</span>);</span><br><span class="line">      &#125;);</span><br><span class="line">      event.emit(<span class="string">"dbClick"</span>);</span><br><span class="line">      event.emit(<span class="string">"dbClick"</span>);</span><br></pre></td></tr></table></figure>
+<h1 id="Js"><a href="#Js" class="headerlink" title="Js"></a>Js</h1><h2 id="创建对象的方式"><a href="#创建对象的方式" class="headerlink" title="创建对象的方式"></a>创建对象的方式</h2><p>字面量： <code>let a = {name:&#39;mary&#39;}</code></p>
+<p>构造函数：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">Person</span>(<span class="params">name</span>)</span>&#123;</span><br><span class="line">    <span class="keyword">this</span>.name = name;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">let</span> p = <span class="keyword">new</span> Person(<span class="string">'lucy'</span>);</span><br></pre></td></tr></table></figure>
+
+<p> 3.<code>Object.create(proto, [propertiesObject])</code></p>
+<p>// Object.create()方法创建的对象时，属性是在原型下面的</p>
+<figure class="highlight plain"><figcaption><span>c</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">**语法**：  </span><br><span class="line">&#96;Object.create(proto[, propertiesObject])&#96;  </span><br><span class="line">**参数**    </span><br><span class="line">proto:</span><br><span class="line">新创建对象的原型对象。  </span><br><span class="line">propertiesObject</span><br><span class="line">可选。如果没有指定为 undefined，则是要添加到新创建对象的不可枚举（默认）属性（即其自身定义的属性，而不是其原型链上的枚举属性）对象的属性描述符以及相应的属性名称。这些属性对应Object.defineProperties()的第二个参数。   </span><br><span class="line">**返回值**</span><br><span class="line">一个新对象，带着指定的原型对象和属性。</span><br><span class="line">&#96;&#96;&#96;javascript</span><br><span class="line">const person &#x3D; &#123;</span><br><span class="line">  isHuman: false,</span><br><span class="line">  printIntroduction: function() &#123;</span><br><span class="line">    console.log(&#96;My name is $&#123;this.name&#125;. Am I human? $&#123;this.isHuman&#125;&#96;);</span><br><span class="line">  &#125;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line">const me &#x3D; Object.create(person);</span><br><span class="line"></span><br><span class="line">me.name &#x3D; &#39;Matthew&#39;; &#x2F;&#x2F; &quot;name&quot; is a property set on &quot;me&quot;, but not on &quot;person&quot;</span><br><span class="line">me.isHuman &#x3D; true; &#x2F;&#x2F; inherited properties can be overwritten</span><br><span class="line"></span><br><span class="line">me.printIntroduction();</span><br><span class="line">&#x2F;&#x2F; expected output: &quot;My name is Matthew. Am I human? true&quot;</span><br></pre></td></tr></table></figure>
+<p><img src="/.com//%E5%8E%9F%E5%9E%8B%E9%93%BE.png" alt="avatar"></p>
+<h2 id="instanceOf原理"><a href="#instanceOf原理" class="headerlink" title="instanceOf原理"></a>instanceOf原理</h2><p>用来测试一个对象在其原型链中是否存在一个构造函数的 prototype 属性</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">&lt;script&gt;</span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">Person</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">Foo</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">//显示改变Foo.prototype指向Person的实例对象（原型继承）</span></span><br><span class="line"></span><br><span class="line">Foo.prototype=<span class="keyword">new</span> Person()</span><br><span class="line"></span><br><span class="line"><span class="keyword">let</span> a=<span class="keyword">new</span> Foo()</span><br><span class="line"></span><br><span class="line"><span class="built_in">console</span>.log(a.__proto__===Foo.prototype); <span class="comment">//true</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">console</span>.log(a <span class="keyword">instanceof</span> Foo);<span class="comment">//true</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">console</span>.log(Foo.prototype.__proto__===Person.prototype);<span class="comment">//true</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">console</span>.log(a <span class="keyword">instanceof</span> Person);<span class="comment">//true</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">console</span>.log(a <span class="keyword">instanceof</span> <span class="built_in">Object</span>);<span class="comment">//true</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// 这个时候改变Foo.prototype的指向</span></span><br><span class="line"></span><br><span class="line">Foo.prototype=&#123;&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// Foo.prototype已经不在a的原型链上面了</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">console</span>.log(a.__proto__===Foo.prototype);<span class="comment">//false</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">console</span>.log(a <span class="keyword">instanceof</span> Foo);<span class="comment">//false</span></span><br><span class="line"></span><br><span class="line"><span class="comment">//Person.prototype依然在a的原型链上面</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">console</span>.log(a <span class="keyword">instanceof</span> Person);<span class="comment">//true</span></span><br><span class="line">&lt;<span class="regexp">/script&gt;</span></span><br></pre></td></tr></table></figure>
+<h2 id="new运算符原理"><a href="#new运算符原理" class="headerlink" title="new运算符原理"></a>new运算符原理</h2><p>1、创建一个空对象<br>2、让空对象的<strong>proto</strong>（IE没有该属性）成员指向了构造函数的prototype成员对象<br>3、使用apply调用构造器函数，属性和方法被添加到 this 引用的对象中<br>4、如果构造函数中没有返回其它对象，那么返回 this，即创建的这个的新对象，否则，返回构造函数中返回的对象</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">_new</span>(<span class="params">func</span>) </span>&#123;</span><br><span class="line">    <span class="comment">// 第一步 创建新对象</span></span><br><span class="line">    <span class="keyword">let</span> obj= &#123;&#125;;</span><br><span class="line">    <span class="comment">// 第二步 空对象的_proto_指向了构造函数的prototype成员对象</span></span><br><span class="line">    obj.__proto__ = func.prototype;<span class="comment">//</span></span><br><span class="line">    <span class="comment">// 一二步合并就相当于 let obj=Object.create(func.prototype)</span></span><br><span class="line"></span><br><span class="line">    <span class="comment">// 第三步 使用apply调用构造器函数，属性和方法被添加到 this 引用的对象中</span></span><br><span class="line">    <span class="keyword">let</span> result = func.apply(obj);</span><br><span class="line">    <span class="keyword">if</span> (result &amp;&amp; (<span class="keyword">typeof</span> (result) == <span class="string">"object"</span> || <span class="keyword">typeof</span> (result) == <span class="string">"function"</span>)) &#123;</span><br><span class="line">    <span class="comment">// 如果构造函数执行的结果返回的是一个对象，那么返回这个对象</span></span><br><span class="line">        <span class="keyword">return</span> result;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">// 如果构造函数返回的不是一个对象，返回创建的新对象</span></span><br><span class="line">    <span class="keyword">return</span> obj;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="JS实现继承的方式"><a href="#JS实现继承的方式" class="headerlink" title="JS实现继承的方式"></a>JS实现继承的方式</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="comment">// 定义一个父类</span></span><br><span class="line">    <span class="function"><span class="keyword">function</span> <span class="title">Father</span>(<span class="params">name</span>) </span>&#123;</span><br><span class="line">      <span class="comment">// 属性</span></span><br><span class="line">      <span class="keyword">this</span>.name = name || <span class="string">"father"</span>;</span><br><span class="line">      <span class="comment">// 实例方法</span></span><br><span class="line">      <span class="keyword">this</span>.sayName = <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">        <span class="built_in">console</span>.log(<span class="keyword">this</span>.name);</span><br><span class="line">      &#125;;</span><br><span class="line">      <span class="keyword">this</span>.color = [<span class="string">"red"</span>, <span class="string">"blue"</span>];</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">// 原型方法</span></span><br><span class="line">    Father.prototype.age = <span class="number">18</span>;</span><br><span class="line">    Father.prototype.sayAge = <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">      <span class="built_in">console</span>.log(<span class="keyword">this</span>.age);</span><br><span class="line">    &#125;;</span><br></pre></td></tr></table></figure>
+<p><strong>1.原型链继承：将父类的实例作为子类的原型</strong></p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">Son</span>(<span class="params">name</span>) </span>&#123;</span><br><span class="line">      <span class="keyword">this</span>.name = name || <span class="string">"son"</span>;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    Son.prototype = <span class="keyword">new</span> Father();</span><br><span class="line"></span><br><span class="line">    <span class="keyword">let</span> s1 = <span class="keyword">new</span> Son(<span class="string">"s1"</span>);</span><br><span class="line">    <span class="keyword">let</span> s2 = <span class="keyword">new</span> Son(<span class="string">"s2"</span>);</span><br><span class="line"></span><br><span class="line">    s1.color.push(<span class="string">"black"</span>);</span><br><span class="line"></span><br><span class="line">    <span class="built_in">console</span>.log(s1.name); <span class="comment">//s1</span></span><br><span class="line">    <span class="built_in">console</span>.log(s1.color); <span class="comment">//['red','blue','black']</span></span><br><span class="line">    <span class="built_in">console</span>.log(s1.age); <span class="comment">//18</span></span><br><span class="line">    s1.sayAge(); <span class="comment">//18</span></span><br><span class="line">    <span class="built_in">console</span>.log(s2.name); <span class="comment">//s2</span></span><br><span class="line">    <span class="built_in">console</span>.log(s2.color); <span class="comment">//['red','blue','black']</span></span><br></pre></td></tr></table></figure>
+
+<p><code>优点</code>：</p>
+<ol>
+<li>简单，易于实现</li>
+<li>父类新增原型方法、原型属性，子类都能访问到  </li>
+</ol>
+<p><code>缺点</code>：</p>
+<ol>
+<li>无法实现多继承，因为原型一次只能被一个实例更改</li>
+<li>来自原型对象的所有属性被所有实例共享（上诉例子中的color属性）</li>
+<li>创建子类实例时，无法向父构造函数传参</li>
+</ol>
+<p><strong>2.构造继承继承：复制父类的实例属性给子类</strong></p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">Son</span>(<span class="params">name</span>) </span>&#123;</span><br><span class="line">      Father.call(<span class="keyword">this</span>, <span class="string">"我是传给父类的参数"</span>);</span><br><span class="line">      <span class="keyword">this</span>.name = name || <span class="string">"son"</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">let</span> s = <span class="keyword">new</span> Son(<span class="string">"son"</span>);</span><br><span class="line">    <span class="built_in">console</span>.log(s.name); <span class="comment">// son</span></span><br><span class="line">    <span class="comment">//s.sayAge(); // 抛出错误（无法继承父类原型方法）</span></span><br><span class="line">    s.sayName(); <span class="comment">// son</span></span><br><span class="line">    <span class="built_in">console</span>.log(s.age); <span class="comment">// undefined （无法继承父类原型属性）</span></span><br><span class="line">    <span class="built_in">console</span>.log(s <span class="keyword">instanceof</span> Father); <span class="comment">// false</span></span><br><span class="line">    <span class="built_in">console</span>.log(s <span class="keyword">instanceof</span> Son); <span class="comment">// true</span></span><br></pre></td></tr></table></figure>
+<p><strong>优点：</strong></p>
+<ol>
+<li>解决了原型链继承中子类实例共享父类引用属性的问题</li>
+<li>创建子类实例时，可以向父类传递参数</li>
+<li>可以实现多继承（call多个父类对象）</li>
+</ol>
+<p><strong>缺点：</strong></p>
+<ol>
+<li>实例并不是父类的实例，只是子类的实例</li>
+<li>只能继承父类实例的属性和方法，不能继承其原型上的属性和方法</li>
+<li>无法实现函数复用，每个子类都有父类实例函数的副本，影响性能</li>
+</ol>
+<p><strong>3.组合继承</strong>：</p>
+<p>将原型链和借用构造函数的技术组合到一块。使用原型链实现对原型属性和方法的继承，而通过构造函数来实现对实例属性的继承</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">Son</span>(<span class="params">name</span>) </span>&#123;</span><br><span class="line">    <span class="comment">// 第一次调用父类构造器 子类实例增加父类实例</span></span><br><span class="line">     Father.call(<span class="keyword">this</span>, <span class="string">"我是传给父类的参数"</span>);</span><br><span class="line">     <span class="keyword">this</span>.name = name || <span class="string">"son"</span>;</span><br><span class="line">   &#125;</span><br><span class="line">   <span class="comment">// 经过new运算符 第二次调用父类构造器 子类原型也增加了父类实例</span></span><br><span class="line">   Son.prototype = <span class="keyword">new</span> Father();</span><br><span class="line"></span><br><span class="line">   <span class="keyword">let</span> s = <span class="keyword">new</span> Son(<span class="string">"son"</span>);</span><br><span class="line">   <span class="built_in">console</span>.log(s.name); <span class="comment">// son</span></span><br><span class="line">   s.sayAge(); <span class="comment">// 18</span></span><br><span class="line">   s.sayName(); <span class="comment">// son</span></span><br><span class="line">   <span class="built_in">console</span>.log(s.age); <span class="comment">// 18</span></span><br><span class="line">   <span class="built_in">console</span>.log(s <span class="keyword">instanceof</span> Father); <span class="comment">// true</span></span><br><span class="line">   <span class="built_in">console</span>.log(s <span class="keyword">instanceof</span> Son); <span class="comment">// true</span></span><br><span class="line">   <span class="built_in">console</span>.log(s.constructor === Father); <span class="comment">// true</span></span><br><span class="line">   <span class="built_in">console</span>.log(s.constructor === Son); <span class="comment">// false</span></span><br></pre></td></tr></table></figure>
+<p><strong>优点</strong>：</p>
+<ol>
+<li>弥补了构造继承的缺点，现在既可以继承实例的属性和方法，也可以继承原型的属性和方法</li>
+<li>既是子类的实例，也是父类的实例</li>
+<li>可以向父类传递参数</li>
+<li>函数可以复用</li>
+</ol>
+<p><strong>缺点</strong>：</p>
+<ol>
+<li>调用了两次父类构造函数，生成了两份实例</li>
+<li>constructor指向问题</li>
+</ol>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2020/05/30/%E9%9D%A2%E8%AF%95%E9%A2%98/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-css" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -387,7 +743,7 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h1 id="每日一题"><a href="#每日一题" class="headerlink" title="每日一题"></a>每日一题</h1>
+        <h1 id="每日一题-part-one"><a href="#每日一题-part-one" class="headerlink" title="每日一题(part-one)"></a>每日一题(part-one)</h1>
         
           <a class="article-more-a" href="/2020/05/21/leetCode-1/#more">more >></a>
         
@@ -598,201 +954,6 @@
       
         <p class="article-more-link">
           <a class="article-more-a" href="/2020/05/20/%E9%98%9F%E5%88%97/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-栈" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/05/20/%E6%A0%88/">数据结构</a>
-    </h1>
-  
-
-        
-        <a href="/2020/05/20/%E6%A0%88/" class="archive-article-date">
-  	<time datetime="2020-05-20T01:49:08.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-05-20</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h1 id="栈"><a href="#栈" class="headerlink" title="栈"></a>栈</h1>
-        
-          <a class="article-more-a" href="/2020/05/20/%E6%A0%88/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2020/05/20/%E6%A0%88/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-列表" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/05/19/%E5%88%97%E8%A1%A8/">数据结构</a>
-    </h1>
-  
-
-        
-        <a href="/2020/05/19/%E5%88%97%E8%A1%A8/" class="archive-article-date">
-  	<time datetime="2020-05-19T11:39:56.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-05-19</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h1 id="列表"><a href="#列表" class="headerlink" title="列表"></a>列表</h1>
-        
-          <a class="article-more-a" href="/2020/05/19/%E5%88%97%E8%A1%A8/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2020/05/19/%E5%88%97%E8%A1%A8/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-数组" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/05/18/%E6%95%B0%E7%BB%84/">数组</a>
-    </h1>
-  
-
-        
-        <a href="/2020/05/18/%E6%95%B0%E7%BB%84/" class="archive-article-date">
-  	<time datetime="2020-05-18T11:17:13.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-05-18</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h1 id="数组"><a href="#数组" class="headerlink" title="数组"></a>数组</h1>
-        
-          <a class="article-more-a" href="/2020/05/18/%E6%95%B0%E7%BB%84/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2020/05/18/%E6%95%B0%E7%BB%84/">展开全文 >></a>
         </p>
       
 
